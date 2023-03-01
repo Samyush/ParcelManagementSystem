@@ -1,28 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/ParcelManagementSystemMVC/ParcelManagementSystemMVC.csproj": {}
+    "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\projectfirst\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj": {}
   },
   "projects": {
-    "/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/ParcelManagementSystemMVC/ParcelManagementSystemMVC.csproj": {
+    "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\projectfirst\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/ParcelManagementSystemMVC/ParcelManagementSystemMVC.csproj",
+        "projectUniqueName": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\projectfirst\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
         "projectName": "ParcelManagementSystemMVC",
-        "projectPath": "/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/ParcelManagementSystemMVC/ParcelManagementSystemMVC.csproj",
-        "packagesPath": "/Users/samyush/.nuget/packages/",
-        "outputPath": "/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/ParcelManagementSystemMVC/obj/",
+        "projectPath": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\projectfirst\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
+        "packagesPath": "C:\\Users\\bisha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\projectfirst\\ParcelManagementSystem\\ParcelManagementSystemMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "/Users/samyush/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\bisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +44,24 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -59,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
