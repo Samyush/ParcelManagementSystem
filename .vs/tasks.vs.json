@@ -1,0 +1,20 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-ParcelManagementSystemMVC",
+      "appliesTo": "ParcelManagementSystemMVC/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-ParcelManagementSystem",
+      "appliesTo": "/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-ParcelManagementSystemMVC",
+      "appliesTo": "ParcelManagementSystemMVC/",
+      "type": "launch"
+    }
+  ]
+}
