@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shash\\OneDrive\\Desktop\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj": {}
+    "C:\\Users\\shash\\OneDrive\\Desktop\\ParcelManagementSystem\\API_WebApp\\API_WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shash\\OneDrive\\Desktop\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj": {
+    "C:\\Users\\shash\\OneDrive\\Desktop\\ParcelManagementSystem\\API_WebApp\\API_WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shash\\OneDrive\\Desktop\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
-        "projectName": "ParcelManagementSystemMVC",
-        "projectPath": "C:\\Users\\shash\\OneDrive\\Desktop\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
+        "projectUniqueName": "C:\\Users\\shash\\OneDrive\\Desktop\\ParcelManagementSystem\\API_WebApp\\API_WebApp.csproj",
+        "projectName": "API_WebApp",
+        "projectPath": "C:\\Users\\shash\\OneDrive\\Desktop\\ParcelManagementSystem\\API_WebApp\\API_WebApp.csproj",
         "packagesPath": "C:\\Users\\shash\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shash\\OneDrive\\Desktop\\ParcelManagementSystem\\ParcelManagementSystemMVC\\obj\\",
+        "outputPath": "C:\\Users\\shash\\OneDrive\\Desktop\\ParcelManagementSystem\\API_WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shash\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,23 +40,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "EntityFramework": {
+            "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.4, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.3, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[7.0.3, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.3, )"
+              "version": "[6.2.3, )"
             }
           },
           "imports": [
