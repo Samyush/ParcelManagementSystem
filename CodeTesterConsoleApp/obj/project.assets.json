@@ -8,28 +8,26 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/Users/samyush/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\91736\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/CodeTesterConsoleApp/CodeTesterConsoleApp.csproj",
+      "projectUniqueName": "C:\\Users\\91736\\Desktop\\project\\ParcelManagementSystem\\CodeTesterConsoleApp\\CodeTesterConsoleApp.csproj",
       "projectName": "CodeTesterConsoleApp",
-      "projectPath": "/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/CodeTesterConsoleApp/CodeTesterConsoleApp.csproj",
-      "packagesPath": "/Users/samyush/.nuget/packages/",
-      "outputPath": "/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/CodeTesterConsoleApp/obj/",
+      "projectPath": "C:\\Users\\91736\\Desktop\\project\\ParcelManagementSystem\\CodeTesterConsoleApp\\CodeTesterConsoleApp.csproj",
+      "packagesPath": "C:\\Users\\91736\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\91736\\Desktop\\project\\ParcelManagementSystem\\CodeTesterConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/Users/samyush/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\91736\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -63,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }
