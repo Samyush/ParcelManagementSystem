@@ -11,7 +11,7 @@ public abstract class ClassTwo
 {
     PartialClass test = new();
 
-    public void tester()
+    public void Tester()
     {
         PartialClass.tester();
         Console.WriteLine("test");
