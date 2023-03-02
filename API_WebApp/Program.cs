@@ -44,3 +44,5 @@ void Princess(IServiceCollection serviceCollection)
 {
     serviceCollection.AddAntiforgery();
 }
+
+//dotnet run --environment Development
