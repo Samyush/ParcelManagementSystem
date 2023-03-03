@@ -4,9 +4,12 @@ namespace ParcelManagementSystemMVC.DataDB
 {
     public class logindb :DbContext
     {
-        public logindb(DbContextOptions options) : base(options)
+        public logindb(DbContextOptions <logindb> options) : base(options)
         { }
+
+        public DbSet<loginclass> loginclass { get; set; }
     }
-    public DbSet<loginclass> Loginclass { get; set; }
+
+    
 
 }
