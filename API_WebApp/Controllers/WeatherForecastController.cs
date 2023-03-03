@@ -6,7 +6,7 @@ namespace API_WebApp.Controllers;
 [Route("api/[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
+    private static readonly string[] Summaries =
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
@@ -66,7 +66,7 @@ public class WeatherForecastController : ControllerBase
             .ToArray();
     }
 
-    [HttpDelete()]
+    [HttpDelete]
     [Route("api/[controller]/yoyo")]
     public IEnumerable<WeatherForecast> Get(string a)
     {

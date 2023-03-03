@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace API_WebApp.MinimalAPIs;
+﻿namespace API_WebApp.MinimalAPIs;
 
 public class UserApIs
 {

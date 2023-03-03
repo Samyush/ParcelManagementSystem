@@ -8,28 +8,33 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/Users/samyush/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\samyu\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/CodeTesterConsoleApp/CodeTesterConsoleApp.csproj",
+      "projectUniqueName": "C:\\Developments\\DotNetProjects\\Codeology\\ParcelManagementSystem\\CodeTesterConsoleApp\\CodeTesterConsoleApp.csproj",
       "projectName": "CodeTesterConsoleApp",
-      "projectPath": "/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/CodeTesterConsoleApp/CodeTesterConsoleApp.csproj",
-      "packagesPath": "/Users/samyush/.nuget/packages/",
-      "outputPath": "/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/CodeTesterConsoleApp/obj/",
+      "projectPath": "C:\\Developments\\DotNetProjects\\Codeology\\ParcelManagementSystem\\CodeTesterConsoleApp\\CodeTesterConsoleApp.csproj",
+      "packagesPath": "C:\\Users\\samyu\\.nuget\\packages\\",
+      "outputPath": "C:\\Developments\\DotNetProjects\\Codeology\\ParcelManagementSystem\\CodeTesterConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/samyush/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\samyu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -63,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
