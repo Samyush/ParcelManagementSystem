@@ -3516,11 +3516,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\projectfirst\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
+      "projectUniqueName": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystems\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
       "projectName": "ParcelManagementSystemMVC",
-      "projectPath": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\projectfirst\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
+      "projectPath": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystems\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
       "packagesPath": "C:\\Users\\bisha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\projectfirst\\ParcelManagementSystem\\ParcelManagementSystemMVC\\obj\\",
+      "outputPath": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystems\\ParcelManagementSystem\\ParcelManagementSystemMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
