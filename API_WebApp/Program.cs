@@ -1,4 +1,5 @@
-using API_WebApp.MinimalAPIs;using API_WebApp.RegisterServices;
+using API_WebApp.MinimalAPIs;
+using API_WebApp.RegisterServices;
 using API_WebApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
