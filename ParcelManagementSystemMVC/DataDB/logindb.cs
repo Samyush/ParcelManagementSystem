@@ -9,7 +9,4 @@ namespace ParcelManagementSystemMVC.DataDB
 
         public DbSet<loginclass> loginclass { get; set; }
     }
-
-    
-
 }
