@@ -1,8 +1,6 @@
-using CodeTesterConsoleApp.UsingEventsDelegates;
-
-namespace CodeTesterConsoleApp
+namespace CodeTesterConsoleApp.UsingEventsDelegates
 {
-    public class VideoEncoder
+    public sealed class VideoEncoder
     {
         // 1. Define a delegate
         // 2. Define an event based on that delegate
@@ -20,7 +18,7 @@ namespace CodeTesterConsoleApp
             OnVideoEncoded();
         }
 
-        protected virtual void OnVideoEncoded()
+        private void OnVideoEncoded()
         {
             if (VideoEncoded != null)
                 VideoEncoded(this, EventArgs.Empty);
