@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using CodeTesterConsoleApp;
+using CodeTesterConsoleApp.ImplementingReflection;
 using CodeTesterConsoleApp.UsingEventsDelegates;
 
 int a;
@@ -47,3 +48,6 @@ new PropertyVsField().Printer();
 Console.WriteLine("========================DelegatesAndEvents=================================");
 new CreatingSubscriberPublisher();
 //new TestClassForEvent().TestMethod();
+
+Console.WriteLine("========================ImplementingReflections=================================");
+new ImpReflections();
