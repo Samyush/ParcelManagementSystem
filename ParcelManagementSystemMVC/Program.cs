@@ -1,15 +1,21 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using ParcelManagementSystemMVC.DataDB;
+using ParcelManagementSystemMVC.Databasefile;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 var provider = builder.Services.BuildServiceProvider();
 var Configuration = provider.GetRequiredService<IConfiguration>();
-builder.Services.AddDbContext<logindb>(item => item.UseSqlServer(Configuration.GetConnectionString
-("myconn")));
+
+
+//register DB
+var connectionString = builder.Configuration.GetConnectionString("ParcelManagementDb");
+builder.Services.AddDbContext<ParcelManagementDb>(options => options.UseSqlServer(connectionString));
+
 
 
 var app = builder.Build();
