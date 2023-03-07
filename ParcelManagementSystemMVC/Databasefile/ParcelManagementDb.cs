@@ -20,6 +20,7 @@ namespace ParcelManagementSystemMVC.Databasefile
                     forgot_id = 1,
                     new_password = "",
                     conform_password = "",
+                    
                 }
                 
                 );
