@@ -3,6 +3,7 @@
 using CodeTesterConsoleApp;
 using CodeTesterConsoleApp.ImplementingReflection;
 using CodeTesterConsoleApp.StringAndStringBuilder;
+using CodeTesterConsoleApp.UnitTesting;
 using CodeTesterConsoleApp.UsingEventsDelegates;
 
 int a;
@@ -72,3 +73,6 @@ new ImpReflections();
 
 Console.WriteLine("========================StringAndStringBuilder=================================");
 StringAndStringBuilder.WorkingWithStringBuilder() ;
+
+Console.WriteLine("========================PerformingUnitTesting=================================");
+new PerformUnitTesting().TestAddition();
