@@ -1,18 +1,36 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+
 namespace ParcelManagementSystemMVC.Models;
 
 public class Users
 {
     [Key]
-    public int Id { get; set; }
+    public int User_Id { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     [MaxLength(10), MinLength(10)]
-    public string Phone { get; set; }
+    public string Street { get; set; }
     [Required]
-    public string Email { get; set; }
+    public string City { get; set; }
+    public string State { get; set; }
+    public string Acess_Role { get; set; }
+    public string Country { get; set; }
+    public string Branch { get; set; }
+    [Required,MaxLength(10),MinLength(10)]
+    public int Phone_number { get; set; }
+
+    [Required]
+   public string Email { get; set; }
+
+    [Required]
+    public string Username { get; set; }
+
+    [Required(ErrorMessage = "Password is required"),
+     MinLength(8, ErrorMessage = "Password must be at least 8 characters long")]
     public string Password { get; set; }
-    public string Role { get; set; }
-    public string Address { get; set; }
+
+    public string Images { get; set; }
+
+
 }
