@@ -1,12 +1,7 @@
-//string[] arg = {"","","","","","","" };
-
-
-
 using Microsoft.EntityFrameworkCore;
 using ParcelManagementSystemMVC.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -31,7 +26,7 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-    "default",
-    "{controller=Home}/{action=Index}/{id?}");
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

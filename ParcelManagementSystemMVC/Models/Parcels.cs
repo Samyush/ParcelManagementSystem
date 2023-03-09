@@ -14,9 +14,8 @@ public class Parcels
     public string ParcelStatus { get; set; }
     public string ParcelLocation { get; set; }
     public string ParcelDestination { get; set; }
-    
     public string ParcelSender { get; set; }
     public string ParcelReceiver { get; set; }
-    
+
 
 }

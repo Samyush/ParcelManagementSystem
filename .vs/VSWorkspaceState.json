@@ -1,10 +1,18 @@
 {
   "ExpandedNodes": [
     "",
+<<<<<<< HEAD
     "\\.idea\\.idea.ParcelManagementSystem",
     "\\API_WebApp",
     "\\ParcelManagementSystemMVC\\Controllers",
     "\\ParcelManagementSystemMVC\\Models"
   ],
+=======
+    "\\ParcelManagementSystemMVC\\bin",
+    "\\ParcelManagementSystemMVC\\bin\\Debug",
+    "\\ParcelManagementSystemMVC\\Models"
+  ],
+  "SelectedNode": "\\ParcelManagementSystem.sln",
+>>>>>>> c86cae8032ea6701995fbdb3d7b5967216dc1fa0
   "PreviewInSolutionExplorer": false
 }
