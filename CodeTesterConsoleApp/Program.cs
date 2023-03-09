@@ -2,6 +2,7 @@
 
 using CodeTesterConsoleApp;
 using CodeTesterConsoleApp.ImplementingReflection;
+using CodeTesterConsoleApp.StringAndStringBuilder;
 using CodeTesterConsoleApp.UsingEventsDelegates;
 
 int a;
@@ -68,3 +69,6 @@ new CreatingSubscriberPublisher();
 
 Console.WriteLine("========================ImplementingReflections=================================");
 new ImpReflections();
+
+Console.WriteLine("========================StringAndStringBuilder=================================");
+StringAndStringBuilder.WorkingWithStringBuilder() ;
