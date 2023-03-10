@@ -1,11 +1,19 @@
 //string[] arg = {"","","","","","","" };
 
 
+using ParcelManagementSystemMVC.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
-
+//builder.Services.AddDbContext<ParcelDbContext>(){x => x. };
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
