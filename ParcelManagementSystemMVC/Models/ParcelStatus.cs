@@ -1,7 +1,11 @@
-﻿namespace ParcelManagementSystemMVC.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace ParcelManagementSystemMVC.Models
 {
+    [Keyless]
     public class ParcelStatus
     {
+        
         public string ParcelWayBillNo { get; set; }
         public string Location { get; set; }
         public string NextNode { get; set; }
