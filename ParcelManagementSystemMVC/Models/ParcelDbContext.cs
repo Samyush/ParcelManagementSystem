@@ -11,4 +11,8 @@ public class ParcelDbContext : DbContext
 
     public DbSet<Users> Users { get; set; }
     public DbSet<Parcels> Parcels { get; set; } 
+    public DbSet<Branch>  Branches { get; set; }
+    public DbSet<ParcelPackage> ParcelPackages { get; set; }
+    public DbSet<ParcelStatus> ParcelStatuses { get; set; }
+
 }

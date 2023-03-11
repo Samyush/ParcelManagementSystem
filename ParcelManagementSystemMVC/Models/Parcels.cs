@@ -1,20 +1,22 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ParcelManagementSystemMVC.Models;
 
 public class Parcels
 {
     public int Id { get; set; }
-    public string ParcelName { get; set; }
-    public string ParcelType { get; set; }
-    public string ParcelWeight { get; set; }
-    public string ParcelSize { get; set; }
-    public string ParcelStatus { get; set; }
+    [Display(Name = "Way Bill Number")]
+    public string WayBillNumber { get; set; }
+    [Display(Name = "Shipment Status")]
+    public string ShipmentStatus { get; set; }
+    [Display(Name = "ParcelLocation")]
     public string ParcelLocation { get; set; }
-    public string ParcelDestination { get; set; }
-    [ForeignKey("UserId")]
-    public string ParcelSender { get; set; }
-    public string ParcelReceiver { get; set; }
+    [ForeignKey("Users.Id")]
+    public int ParcelSenderId { get; set; }
+    public int ParcelReceiverId{ get; set; }
     
     public Users UserId { get; set; }
+
+    public List<ParcelPackage> Packages { get; set; }
 }
