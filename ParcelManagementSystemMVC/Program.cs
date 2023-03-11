@@ -1,6 +1,7 @@
 //string[] arg = {"","","","","","","" };
 
 
+using Microsoft.EntityFrameworkCore;
 using ParcelManagementSystemMVC.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,11 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 //builder.Services.AddDbContext<ParcelDbContext>(){x => x. };
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-
-
-
-
+builder.Services.AddDbContext<ParcelDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DbConn")));
 
 var app = builder.Build();
 
