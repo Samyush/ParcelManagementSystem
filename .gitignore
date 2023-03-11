@@ -1,9 +1,0 @@
-obj
-API_WebApp/bin
-ParcelManagementSystem/bin
-ParcelManagementSystemMVC/bin
-ParcelManagementSystemMVC/obj
-CodeTesterConsoleApp/bin
-CodeTesterConsoleApp/obj
-.vs/
-appsettings.json
