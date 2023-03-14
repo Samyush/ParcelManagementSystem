@@ -1,22 +1,31 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.Identity.Client;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ParcelManagementSystemMVC.Models;
 
 public class Parcels
 {
-    public int Id { get; set; }
-    [Display(Name = "Way Bill Number")]
+    [Key]
     public string WayBillNumber { get; set; }
-    [Display(Name = "Shipment Status")]
-    public string ShipmentStatus { get; set; }
-    [Display(Name = "ParcelLocation")]
-    public string ParcelLocation { get; set; }
-    [ForeignKey("Users.Id")]
-    public int ParcelSenderId { get; set; }
-    public int ParcelReceiverId{ get; set; }
-    
-    public Users UserId { get; set; }
+    public DateTime DateCreate { get; set; }= DateTime.Now;
+    public string SenderName { get; set; }
+    public string SenderAddress { get; set; }
+    public string SenderPhone { get; set; }
+    public string ReceiverName { get; set; }
+    public string ReceiverAddress { get; set; }
+    public string ReceiverPhone { get; set; }
+    public int NoOfPackets { get; set; }
+    public int LorryNo { get; set; }
+    public int TinNo { get; set; }
+    public string DescriptionofGoods { get; set; }
+    public int ActualWeight { get; set; }
+    public double ValueofGoods { get; set; }
 
-    public List<ParcelPackage> Packages { get; set; }
+    //Relationship
+    public int UserParcelId { get; set; }
+    [ForeignKey("UserParcelId")]
+    public Users Users { get; set; }
+    
+
 }
