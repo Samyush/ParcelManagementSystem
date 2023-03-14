@@ -5,40 +5,41 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ParcelManagementSystemMVC
 build_property.RootNamespace = ParcelManagementSystemMVC
-build_property.ProjectDir = /Users/samyush/Development/Asp.netCore/ParcelManagementSystem/ParcelManagementSystemMVC/
+build_property.ProjectDir = C:\Users\ACER\Desktop\New folder\ParcelManagementSystem\ParcelManagementSystemMVC\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/samyush/Development/Asp.netCore/ParcelManagementSystem/ParcelManagementSystemMVC
+build_property.MSBuildProjectDirectory = C:\Users\ACER\Desktop\New folder\ParcelManagementSystem\ParcelManagementSystemMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/ParcelManagementSystemMVC/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[C:/Users/ACER/Desktop/New folder/ParcelManagementSystem/ParcelManagementSystemMVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/ParcelManagementSystemMVC/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+[C:/Users/ACER/Desktop/New folder/ParcelManagementSystem/ParcelManagementSystemMVC/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/ParcelManagementSystemMVC/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+[C:/Users/ACER/Desktop/New folder/ParcelManagementSystem/ParcelManagementSystemMVC/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/ParcelManagementSystemMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/Users/ACER/Desktop/New folder/ParcelManagementSystem/ParcelManagementSystemMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/ParcelManagementSystemMVC/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/ACER/Desktop/New folder/ParcelManagementSystem/ParcelManagementSystemMVC/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/ParcelManagementSystemMVC/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/ACER/Desktop/New folder/ParcelManagementSystem/ParcelManagementSystemMVC/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/samyush/Development/Asp.netCore/ParcelManagementSystem/ParcelManagementSystemMVC/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-rkmx2cfl4k
+[C:/Users/ACER/Desktop/New folder/ParcelManagementSystem/ParcelManagementSystemMVC/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1zmfhbwvpm

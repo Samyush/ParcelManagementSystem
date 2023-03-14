@@ -1,8 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using ParcelManagementSystemMVC.DBContext;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+var provider =builder.Services.BuildServiceProvider();
+var configuration = provider.GetService<IConfiguration>();
+builder.Services.AddDbContext<ParcelDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("myconn")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
