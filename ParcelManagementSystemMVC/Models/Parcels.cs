@@ -17,7 +17,7 @@ public class Parcels
     public string Parcel_Sender { get; set; }
     public string Parcel_Receiver { get; set; }
     public string Original_Brand { get; set; }
-    public DateOnly Date_and_Time { get; set; }
+    public DateTime Date_and_Time { get; set; }
     public string Way_Bill_Number { get; set; }
     public string Address_of_Delivery { get; set; }
     public string Status_of_Delivery { get; set; }
@@ -43,4 +43,17 @@ public class Parcels
     public string Location { get; set; }
     public string History_of_Parcel {get;set;}
     public string Actions { get;set; }
+
+    [ForeignKey("Parcel_id")]
+
+    public int Branch_id{ get; set; }
+    public Branchdb branchdb { get; set; }
+
+    [ForeignKey("roll_id")]
+        
+    public int roll_id { get; set; }    
+    public rolesdb rolesdb { get; set; }
+
+    [ForeignKey("History_of_Parcel")]
+    public historydb historydbs { get; set; }
 }

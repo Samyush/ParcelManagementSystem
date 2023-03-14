@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QqQDrd9ADvjWAgywUL1EIbAcwIZ30zn00qCUeW0yf951RbOLmwHHoMypUtbG1nQomV41p22gNxFceJu3CQj9PA==",
+  "dgSpecHash": "ROhYhrtFd79e3Leh+z6CU+/8DgqRSX4p6VFqBL/vGD+oHi8LMK2QK7gEcxvsvcVDmfoj4mB8xSW43/Wp8VK5jg==",
   "success": true,
   "projectFilePath": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystems\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
   "expectedPackageFiles": [
@@ -18,6 +18,7 @@
     "C:\\Users\\bisha\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.3\\microsoft.entityframeworkcore.design.7.0.3.nupkg.sha512",
     "C:\\Users\\bisha\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.3\\microsoft.entityframeworkcore.relational.7.0.3.nupkg.sha512",
     "C:\\Users\\bisha\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.3\\microsoft.entityframeworkcore.sqlserver.7.0.3.nupkg.sha512",
+    "C:\\Users\\bisha\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.3\\microsoft.entityframeworkcore.tools.7.0.3.nupkg.sha512",
     "C:\\Users\\bisha\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\bisha\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\bisha\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
