@@ -8,7 +8,7 @@ namespace CodeTesterConsoleApp.UsingEventsDelegates
 
         public delegate void VideoEncodedEventHandler(object source, EventArgs args);
 
-        public event VideoEncodedEventHandler VideoEncoded;
+        public event VideoEncodedEventHandler? VideoEncoded;
 
         public void Encode(Video video)
         {

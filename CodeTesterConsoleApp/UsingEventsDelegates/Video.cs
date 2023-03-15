@@ -2,6 +2,6 @@ namespace CodeTesterConsoleApp.UsingEventsDelegates
 {
     public class Video
     {
-        public string Title { get; set; }
+        public string? Title { get; set; }
     }
 }
