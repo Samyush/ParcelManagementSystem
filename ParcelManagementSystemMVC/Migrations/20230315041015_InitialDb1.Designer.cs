@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ParcelManagementSystemMVC.Data;
 
@@ -11,9 +12,11 @@ using ParcelManagementSystemMVC.Data;
 namespace ParcelManagementSystemMVC.Migrations
 {
     [DbContext(typeof(ParcelDbContext))]
-    partial class ParcelDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230315041015_InitialDb1")]
+    partial class InitialDb1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -142,45 +145,6 @@ namespace ParcelManagementSystemMVC.Migrations
                     b.HasKey("ReceiverId");
 
                     b.ToTable("Receivers");
-                });
-
-            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Role", b =>
-                {
-                    b.Property<int>("RoleId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleId"));
-
-                    b.Property<string>("Action")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Delete")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("Export")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("Manage")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Roles")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("View")
-                        .HasColumnType("bit");
-
-                    b.HasKey("RoleId");
-
-                    b.HasIndex("UserId")
-                        .IsUnique();
-
-                    b.ToTable("Roles");
                 });
 
             modelBuilder.Entity("ParcelManagementSystemMVC.Models.Send_Rec", b =>
@@ -313,17 +277,6 @@ namespace ParcelManagementSystemMVC.Migrations
                     b.Navigation("userLists");
                 });
 
-            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Role", b =>
-                {
-                    b.HasOne("ParcelManagementSystemMVC.Models.userList", "userLists")
-                        .WithOne("Roles")
-                        .HasForeignKey("ParcelManagementSystemMVC.Models.Role", "UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("userLists");
-                });
-
             modelBuilder.Entity("ParcelManagementSystemMVC.Models.Send_Rec", b =>
                 {
                     b.HasOne("ParcelManagementSystemMVC.Models.Receiver", "Receivers")
@@ -389,9 +342,6 @@ namespace ParcelManagementSystemMVC.Migrations
             modelBuilder.Entity("ParcelManagementSystemMVC.Models.userList", b =>
                 {
                     b.Navigation("Recievers")
-                        .IsRequired();
-
-                    b.Navigation("Roles")
                         .IsRequired();
 
                     b.Navigation("Senders")
