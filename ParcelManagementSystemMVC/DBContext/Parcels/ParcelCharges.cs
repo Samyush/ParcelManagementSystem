@@ -1,8 +1,7 @@
-﻿using ParcalManagementSystemMVC.DBContext;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ParcelManagementSystemMVC.DBContext
+namespace ParcelManagementSystemMVC.DBContext.Parcels
 {
     public class ParcelCharges
     {

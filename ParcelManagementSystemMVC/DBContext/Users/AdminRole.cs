@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ParcelManagementSystemMVC.DBContext
+namespace ParcelManagementSystemMVC.DBContext.Users
 {
-    public class AdminRole
+    public class UserRole
     {
         [Key]
         public int Role_Id { get; set; }

@@ -12,8 +12,8 @@ using ParcelManagementSystemMVC.DBContext;
 namespace ParcelManagementSystemMVC.Migrations
 {
     [DbContext(typeof(ParcelDBContext))]
-    [Migration("20230314151606_Image")]
-    partial class Image
+    [Migration("20230315074829_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -1,13 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace ParcalManagementSystemMVC.DBContext
+namespace ParcelManagementSystemMVC.DBContext.Parcels
 {
     public class ParcelPackage
     {
         [Key]
         public int Package_Id { get; set; }
-        
+
         public int PacketsNumber { get; set; }
         public string Description { get; set; }
         public int AcutalWeight { get; set; }

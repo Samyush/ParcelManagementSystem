@@ -6,7 +6,8 @@ namespace ParcelManagementSystemMVC.DBContext
 {
     public class ParcelDBContext : DbContext
     {
-        public ParcelDBContext(DbContextOptions options) : base(options) { 
+        public ParcelDBContext(DbContextOptions options) : base(options) {
+            Database.EnsureCreated();
         }
         public DbSet<Parcel> Parcels { get; set; }
         public DbSet<NewUser> Users { get; set; }

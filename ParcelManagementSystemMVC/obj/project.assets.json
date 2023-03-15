@@ -3510,19 +3510,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ACER\\.nuget\\packages\\": {}
+    "C:\\Users\\samyu\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ACER\\Desktop\\New folder\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
+      "projectUniqueName": "C:\\Developments\\DotNetProjects\\Codeology\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
       "projectName": "ParcelManagementSystemMVC",
-      "projectPath": "C:\\Users\\ACER\\Desktop\\New folder\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
-      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ACER\\Desktop\\New folder\\ParcelManagementSystem\\ParcelManagementSystemMVC\\obj\\",
+      "projectPath": "C:\\Developments\\DotNetProjects\\Codeology\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
+      "packagesPath": "C:\\Users\\samyu\\.nuget\\packages\\",
+      "outputPath": "C:\\Developments\\DotNetProjects\\Codeology\\ParcelManagementSystem\\ParcelManagementSystemMVC\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\samyu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3582,7 +3589,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

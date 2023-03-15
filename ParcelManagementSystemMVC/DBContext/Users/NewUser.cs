@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ParcelManagementSystemMVC.DBContext
+namespace ParcelManagementSystemMVC.DBContext.Users
 {
     public class NewUser
     {

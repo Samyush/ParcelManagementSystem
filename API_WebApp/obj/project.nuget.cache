@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "+a7r861oC0wFo+9qa1LJ9/B4Dm96i2uFEOW0BbOk2pM3uLVtQdAiTbDVWYyCnLFJmX6Ev4BxY2Bs+Mc4Spmtdg==",
+  "success": true,
+  "projectFilePath": "C:\\Developments\\DotNetProjects\\Codeology\\ParcelManagementSystem\\API_WebApp\\API_WebApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\samyu\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\samyu\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\samyu\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\samyu\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\samyu\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\samyu\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
