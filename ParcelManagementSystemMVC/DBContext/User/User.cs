@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ParcelManagementSystemMVC.DBContext
+namespace ParcelManagementSystemMVC.DBContext.User
 {
-    public class NewUser
+    public class User
     {
         [Key]
         public int User_Id { get; set; }

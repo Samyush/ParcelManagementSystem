@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ParcelManagementSystemMVC.DBContext;
+using ParcelManagementSystemMVC.DBContext.Parcel;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ParcelManagementSystemMVC.DBContext.Parcel;
 
@@ -11,9 +12,11 @@ using ParcelManagementSystemMVC.DBContext.Parcel;
 namespace ParcelManagementSystemMVC.Migrations
 {
     [DbContext(typeof(ParcelDBContext))]
-    partial class ParcelDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230315164329_new")]
+    partial class @new
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -162,9 +165,6 @@ namespace ParcelManagementSystemMVC.Migrations
                     b.Property<int>("DuePaid")
                         .HasColumnType("int");
 
-                    b.Property<int>("Parcel_Id")
-                        .HasColumnType("int");
-
                     b.Property<string>("Pay")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -179,8 +179,6 @@ namespace ParcelManagementSystemMVC.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Charge_Id");
-
-                    b.HasIndex("Parcel_Id");
 
                     b.ToTable("Charges");
                 });
@@ -328,17 +326,6 @@ namespace ParcelManagementSystemMVC.Migrations
                         .IsRequired();
 
                     b.Navigation("userParcel");
-                });
-
-            modelBuilder.Entity("ParcelManagementSystemMVC.DBContext.Parcel.ParcelCharges", b =>
-                {
-                    b.HasOne("ParcelManagementSystemMVC.DBContext.Parcel.Parcel", "parcel")
-                        .WithMany()
-                        .HasForeignKey("Parcel_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("parcel");
                 });
 
             modelBuilder.Entity("ParcelManagementSystemMVC.DBContext.Parcel.ParcelPackage", b =>
