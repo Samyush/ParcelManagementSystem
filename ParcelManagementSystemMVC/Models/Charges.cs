@@ -16,7 +16,7 @@ namespace ParcelManagementSystemMVC.Models
         //Relations
         public string WayBillNo { get; set; }
         [ForeignKey("WayBillNo")]
-        public Parcels Parcels { get; set; }
+        public Parcels ParcelsCharges { get; set; }
 
 
     }

@@ -22,9 +22,9 @@ public class Users
     //Relationships
     public string BranchCode { get; set; }
     [ForeignKey("BranchCode")]
-    public Branch Branch { get; set; }
+    public Branch UserBranch { get; set; }
 
     public string AccessRole { get; set; }
     [ForeignKey("AccessRole")]
-    public Roles Roles { get; set; }
+    public Roles UserRoles { get; set; }
 }

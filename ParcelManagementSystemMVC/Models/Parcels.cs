@@ -9,12 +9,7 @@ public class Parcels
     [Key]
     public string WayBillNumber { get; set; }
     public DateTime DateCreate { get; set; }= DateTime.Now;
-    public string SenderName { get; set; }
-    public string SenderAddress { get; set; }
-    public string SenderPhone { get; set; }
-    public string ReceiverName { get; set; }
-    public string ReceiverAddress { get; set; }
-    public string ReceiverPhone { get; set; }
+    public string DeliveryStatus { get; set; }
     public int NoOfPackets { get; set; }
     public int LorryNo { get; set; }
     public int TinNo { get; set; }
@@ -25,7 +20,13 @@ public class Parcels
     //Relationship
     public int UserParcelId { get; set; }
     [ForeignKey("UserParcelId")]
-    public Users Users { get; set; }
-    
+    public  Users UserParcel { get; set; }
+    public int SenderId { get; set; }
+    [ForeignKey("SenderId")]
+    public  Users UserSender { get; set; }
+    public int ReceiverId { get; set; }
+    [ForeignKey("ReceiverId")]
+    public  Users UserReceiver { get; set; }
+
 
 }
