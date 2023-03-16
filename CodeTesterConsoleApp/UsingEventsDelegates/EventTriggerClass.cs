@@ -8,7 +8,7 @@ public class EventTriggerClass
     
     public delegate void EventTrigger(string message ,object source, EventArgs args);
     
-    public event EventTrigger EventTriggered;
+    public event EventTrigger? EventTriggered;
     
     public void TriggerEvent()
     {

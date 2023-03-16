@@ -2,6 +2,8 @@
 
 public class ClassOne : ClassTwo
 {
+    //we cannot create instance of abstract class
+    //ClassTwo classTwo = new();
 }
 
 public abstract class ClassTwo
