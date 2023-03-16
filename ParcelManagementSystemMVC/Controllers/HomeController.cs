@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using ParcelManagementSystemMVC.DBContext;
 using ParcelManagementSystemMVC.Models;
 
 namespace ParcelManagementSystemMVC.Controllers;
@@ -7,10 +8,11 @@ namespace ParcelManagementSystemMVC.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    private readonly ParcelDBContext _parcelDBContext;
+    public HomeController(ILogger<HomeController> logger, ParcelDBContext parcelDBContext)
     {
         _logger = logger;
+        _parcelDBContext = parcelDBContext;
     }
 
     public IActionResult Index()
