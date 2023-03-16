@@ -11,7 +11,6 @@ namespace ParcelManagementSystemMVC.Models.Parcel
         public float Due_Paid { get; set; }
         public float Vat { get; set; }
         public float G_Total { get; set; }
-
         public int Percel_Id { get; set; }
 
         [ForeignKey("Parcel_Id")]

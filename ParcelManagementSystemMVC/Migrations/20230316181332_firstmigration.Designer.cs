@@ -12,7 +12,7 @@ using ParcelManagementSystemMVC.Models;
 namespace ParcelManagementSystemMVC.Migrations
 {
     [DbContext(typeof(ParcelDbContext))]
-    [Migration("20230316063317_firstmigration")]
+    [Migration("20230316181332_firstmigration")]
     partial class firstmigration
     {
         /// <inheritdoc />
@@ -25,30 +25,39 @@ namespace ParcelManagementSystemMVC.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Actiondb", b =>
+            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Branch", b =>
                 {
-                    b.Property<int>("Action_Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Action_Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<int>("Branch_Id")
+                        .HasColumnType("int");
 
                     b.Property<int>("Parcel_Id")
                         .HasColumnType("int");
 
-                    b.Property<int>("User_Id")
+                    b.Property<int>("St_Id")
                         .HasColumnType("int");
 
-                    b.HasKey("Action_Id");
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("Branch_Id");
 
                     b.HasIndex("Parcel_Id");
 
-                    b.HasIndex("User_Id");
+                    b.HasIndex("St_Id");
 
-                    b.ToTable("actiondb");
+                    b.ToTable("branches");
                 });
 
-            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Branchdb", b =>
+            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Branchdetails", b =>
                 {
                     b.Property<int>("Branch_Id")
                         .ValueGeneratedOnAdd()
@@ -72,7 +81,7 @@ namespace ParcelManagementSystemMVC.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Branch_Name")
+                    b.Property<string>("Branch_Location")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -84,17 +93,7 @@ namespace ParcelManagementSystemMVC.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Parcel_Id")
-                        .HasColumnType("int");
-
-                    b.Property<int>("User_Id")
-                        .HasColumnType("int");
-
                     b.HasKey("Branch_Id");
-
-                    b.HasIndex("Parcel_Id");
-
-                    b.HasIndex("User_Id");
 
                     b.ToTable("Branchdbs");
                 });
@@ -113,14 +112,9 @@ namespace ParcelManagementSystemMVC.Migrations
                     b.Property<int>("Percel_Id")
                         .HasColumnType("int");
 
-                    b.Property<int>("User_Id")
-                        .HasColumnType("int");
-
                     b.HasKey("History_Id");
 
                     b.HasIndex("Parcel_Id");
-
-                    b.HasIndex("User_Id");
 
                     b.ToTable("HistoryParcel");
                 });
@@ -206,10 +200,6 @@ namespace ParcelManagementSystemMVC.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Percel_Id"));
 
-                    b.Property<string>("Address_of_Delivery")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
@@ -217,14 +207,6 @@ namespace ParcelManagementSystemMVC.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Next_Node")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Parcel_Destination")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Parcel_Location")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -240,15 +222,11 @@ namespace ParcelManagementSystemMVC.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Receiver_Name")
+                    b.Property<string>("Receiver_Address")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Sender_Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Status_of_Delivery")
+                    b.Property<string>("Sender_Address")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -259,6 +237,50 @@ namespace ParcelManagementSystemMVC.Migrations
                     b.HasKey("Percel_Id");
 
                     b.ToTable("Parcels");
+                });
+
+            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Parcel.Receiverdetails", b =>
+                {
+                    b.Property<int>("receiverid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("receiverid"));
+
+                    b.Property<int>("Parcel_Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("receivername")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("receiverid");
+
+                    b.HasIndex("Parcel_Id");
+
+                    b.ToTable("receiverdetail");
+                });
+
+            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Parcel.Senderdetails", b =>
+                {
+                    b.Property<int>("senderid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("senderid"));
+
+                    b.Property<int>("Parcel_Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("sendername")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("senderid");
+
+                    b.HasIndex("Parcel_Id");
+
+                    b.ToTable("senderdetail");
                 });
 
             modelBuilder.Entity("ParcelManagementSystemMVC.Models.Parcel.UpdateParcel", b =>
@@ -287,7 +309,7 @@ namespace ParcelManagementSystemMVC.Migrations
                     b.ToTable("UpdateParcel");
                 });
 
-            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Rolesdb", b =>
+            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Roles", b =>
                 {
                     b.Property<int>("Roll_Id")
                         .ValueGeneratedOnAdd()
@@ -313,7 +335,86 @@ namespace ParcelManagementSystemMVC.Migrations
                     b.ToTable("rolesdbs");
                 });
 
-            modelBuilder.Entity("ParcelManagementSystemMVC.Models.users.Jobtitledb", b =>
+            modelBuilder.Entity("ParcelManagementSystemMVC.Models.staff", b =>
+                {
+                    b.Property<int>("St_Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Create_by")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Modify_by")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Parcel_Id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Percel_Id")
+                        .HasColumnType("int");
+
+                    b.HasKey("St_Id");
+
+                    b.HasIndex("Parcel_Id");
+
+                    b.ToTable("staff");
+                });
+
+            modelBuilder.Entity("ParcelManagementSystemMVC.Models.users.Users", b =>
+                {
+                    b.Property<int>("User_Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("User_Id"));
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("First_name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Last_name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Phone")
+                        .HasMaxLength(10)
+                        .HasColumnType("int");
+
+                    b.Property<string>("Street")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("User_Id");
+
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("ParcelManagementSystemMVC.Models.users.jobtitles", b =>
                 {
                     b.Property<int>("job_id")
                         .ValueGeneratedOnAdd()
@@ -321,7 +422,7 @@ namespace ParcelManagementSystemMVC.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("job_id"));
 
-                    b.Property<int>("User_Id")
+                    b.Property<int>("St_Id")
                         .HasColumnType("int");
 
                     b.Property<string>("job_description")
@@ -338,12 +439,12 @@ namespace ParcelManagementSystemMVC.Migrations
 
                     b.HasKey("job_id");
 
-                    b.HasIndex("User_Id");
+                    b.HasIndex("St_Id");
 
                     b.ToTable("jobtitledbs");
                 });
 
-            modelBuilder.Entity("ParcelManagementSystemMVC.Models.users.TotalStaffdb", b =>
+            modelBuilder.Entity("ParcelManagementSystemMVC.Models.users.staff_details", b =>
                 {
                     b.Property<int>("St_Id")
                         .ValueGeneratedOnAdd()
@@ -370,98 +471,31 @@ namespace ParcelManagementSystemMVC.Migrations
                     b.ToTable("totalStaffdbs");
                 });
 
-            modelBuilder.Entity("ParcelManagementSystemMVC.Models.users.Users", b =>
+            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Branch", b =>
                 {
-                    b.Property<int>("User_Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.HasOne("ParcelManagementSystemMVC.Models.Branchdetails", "branchdetail")
+                        .WithMany()
+                        .HasForeignKey("Branch_Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("User_Id"));
-
-                    b.Property<string>("City")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Country")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("External")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("First_name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Last_name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("State")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Street")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("User_Id");
-
-                    b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Actiondb", b =>
-                {
-                    b.HasOne("ParcelManagementSystemMVC.Models.Parcel.Parcels", "Parcelid")
+                    b.HasOne("ParcelManagementSystemMVC.Models.Parcel.Parcels", "parcel")
                         .WithMany()
                         .HasForeignKey("Parcel_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ParcelManagementSystemMVC.Models.users.Users", "users")
+                    b.HasOne("ParcelManagementSystemMVC.Models.users.staff_details", "staff_detail")
                         .WithMany()
-                        .HasForeignKey("User_Id")
+                        .HasForeignKey("St_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Parcelid");
+                    b.Navigation("branchdetail");
 
-                    b.Navigation("users");
-                });
+                    b.Navigation("parcel");
 
-            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Branchdb", b =>
-                {
-                    b.HasOne("ParcelManagementSystemMVC.Models.Parcel.Parcels", "Parcels")
-                        .WithMany()
-                        .HasForeignKey("Parcel_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ParcelManagementSystemMVC.Models.users.Users", "users")
-                        .WithMany()
-                        .HasForeignKey("User_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Parcels");
-
-                    b.Navigation("users");
+                    b.Navigation("staff_detail");
                 });
 
             modelBuilder.Entity("ParcelManagementSystemMVC.Models.HistoryParcel", b =>
@@ -472,15 +506,7 @@ namespace ParcelManagementSystemMVC.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ParcelManagementSystemMVC.Models.users.Users", "User")
-                        .WithMany()
-                        .HasForeignKey("User_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Parcel");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ParcelManagementSystemMVC.Models.Parcel.Chargedb", b =>
@@ -505,6 +531,28 @@ namespace ParcelManagementSystemMVC.Migrations
                     b.Navigation("Parcel");
                 });
 
+            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Parcel.Receiverdetails", b =>
+                {
+                    b.HasOne("ParcelManagementSystemMVC.Models.Parcel.Parcels", "parcel")
+                        .WithMany()
+                        .HasForeignKey("Parcel_Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("parcel");
+                });
+
+            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Parcel.Senderdetails", b =>
+                {
+                    b.HasOne("ParcelManagementSystemMVC.Models.Parcel.Parcels", "parcel")
+                        .WithMany()
+                        .HasForeignKey("Parcel_Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("parcel");
+                });
+
             modelBuilder.Entity("ParcelManagementSystemMVC.Models.Parcel.UpdateParcel", b =>
                 {
                     b.HasOne("ParcelManagementSystemMVC.Models.Parcel.Parcels", "Parcel")
@@ -516,7 +564,7 @@ namespace ParcelManagementSystemMVC.Migrations
                     b.Navigation("Parcel");
                 });
 
-            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Rolesdb", b =>
+            modelBuilder.Entity("ParcelManagementSystemMVC.Models.Roles", b =>
                 {
                     b.HasOne("ParcelManagementSystemMVC.Models.users.Users", "User")
                         .WithMany()
@@ -527,18 +575,37 @@ namespace ParcelManagementSystemMVC.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("ParcelManagementSystemMVC.Models.users.Jobtitledb", b =>
+            modelBuilder.Entity("ParcelManagementSystemMVC.Models.staff", b =>
                 {
-                    b.HasOne("ParcelManagementSystemMVC.Models.users.Users", "User")
+                    b.HasOne("ParcelManagementSystemMVC.Models.Parcel.Parcels", "Parcel")
                         .WithMany()
-                        .HasForeignKey("User_Id")
+                        .HasForeignKey("Parcel_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("User");
+                    b.HasOne("ParcelManagementSystemMVC.Models.users.staff_details", "staff_Detail")
+                        .WithMany()
+                        .HasForeignKey("St_Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Parcel");
+
+                    b.Navigation("staff_Detail");
                 });
 
-            modelBuilder.Entity("ParcelManagementSystemMVC.Models.users.TotalStaffdb", b =>
+            modelBuilder.Entity("ParcelManagementSystemMVC.Models.users.jobtitles", b =>
+                {
+                    b.HasOne("ParcelManagementSystemMVC.Models.users.staff_details", "staff_Detail")
+                        .WithMany()
+                        .HasForeignKey("St_Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("staff_Detail");
+                });
+
+            modelBuilder.Entity("ParcelManagementSystemMVC.Models.users.staff_details", b =>
                 {
                     b.HasOne("ParcelManagementSystemMVC.Models.users.Users", "User")
                         .WithMany()

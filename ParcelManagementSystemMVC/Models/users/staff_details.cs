@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ParcelManagementSystemMVC.Models.users
 {
-    public class TotalStaffdb
+    public class staff_details
     {
         [Key]
         public int St_Id { get; set; }

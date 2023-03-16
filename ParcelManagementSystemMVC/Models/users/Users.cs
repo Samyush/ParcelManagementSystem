@@ -15,15 +15,13 @@ namespace ParcelManagementSystemMVC.Models.users
         public string Street { get; set; }
         [Required]
         public string City { get; set; }
-        [Required]
-        public string State { get; set; }
-        [Required]
+       
+        [Required,MaxLength(10),MinLength(10)]
+        public int Phone { get; set; }
         public string Country { get; set; }
         public string Email { get; set; }
         [Required]
         public string Image { get; set; }
-        public bool External { get; set; }  
-        [Required]
         public string Username { get; set; }
         [Required]
         public string Password { get; set; }

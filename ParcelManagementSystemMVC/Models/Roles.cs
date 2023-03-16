@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ParcelManagementSystemMVC.Models
 {
-    public class Rolesdb
+    public class Roles
     {
         [Key]
         public int Roll_Id { get; set; }
