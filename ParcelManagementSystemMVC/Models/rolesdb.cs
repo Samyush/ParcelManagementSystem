@@ -1,19 +1,17 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ParcelManagementSystemMVC.Models.users;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ParcelManagementSystemMVC.Models
 {
-    public class rolesdb
+    public class Rolesdb
     {
         [Key]
-        public int roll_id { get; set; }
-        public string Name { get; set; }   
-        public string status { get; set; }  
-        public string Actions { get; set; }
-
-        public ICollection <Parcels> parcels { get; set; }
-        public ICollection<User>users { get; set; }
-
-
+        public int Roll_Id { get; set; }
+        public string Name { get; set; }
+        public string Status { get; set; }
+        public int User_Id { get; set; }
+        [ForeignKey("User_Id")]
+        public Users User { get; set; }
     }
 }
