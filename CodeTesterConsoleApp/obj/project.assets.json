@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystems\\ParcelManagementSystem\\CodeTesterConsoleApp\\CodeTesterConsoleApp.csproj",
+      "projectUniqueName": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystem\\ParcelManagementSystem\\CodeTesterConsoleApp\\CodeTesterConsoleApp.csproj",
       "projectName": "CodeTesterConsoleApp",
-      "projectPath": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystems\\ParcelManagementSystem\\CodeTesterConsoleApp\\CodeTesterConsoleApp.csproj",
+      "projectPath": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystem\\ParcelManagementSystem\\CodeTesterConsoleApp\\CodeTesterConsoleApp.csproj",
       "packagesPath": "C:\\Users\\bisha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystems\\ParcelManagementSystem\\CodeTesterConsoleApp\\obj\\",
+      "outputPath": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystem\\ParcelManagementSystem\\CodeTesterConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

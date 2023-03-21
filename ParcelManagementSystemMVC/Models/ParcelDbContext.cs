@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using ParcelManagementSystemMVC.Models.Parcel;
 using ParcelManagementSystemMVC.Models.users;
 
 namespace ParcelManagementSystemMVC.Models;
 
 
-public class ParcelDbContext : DbContext
+public class ParcelDbContext : IdentityDbContext
 {
     public ParcelDbContext(DbContextOptions<ParcelDbContext> options) : base(options)
     {
@@ -13,8 +14,8 @@ public class ParcelDbContext : DbContext
 
     }
 
-    public DbSet<Users> Users { get; set; }
-    public DbSet<Parcels> Parcels { get; set; }
+    public DbSet<Users> User { get; set; }
+    public DbSet<Parcels> Parcel{ get; set; }
     public DbSet<Branchdetails> Branchdbs { get; set; }
    public DbSet<staff_details> totalStaffdbs { get; set; }
     public DbSet<Roles> rolesdbs { get; set; }

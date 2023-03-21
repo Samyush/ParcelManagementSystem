@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ParcelManagementSystemMVC.Models;
 
@@ -6,6 +7,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ParcelDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+
+
+
+//builder.Services.AddTransient<IMessageService, FileMessageService>();
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<ParcelDbContext>()
+    .AddDefaultTokenProviders();
 
 var app = builder.Build();
 

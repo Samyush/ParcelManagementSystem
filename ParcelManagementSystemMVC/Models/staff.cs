@@ -17,7 +17,5 @@ namespace ParcelManagementSystemMVC.Models
                 [ForeignKey("Parcel_Id")]
         public Parcels Parcel { get; set; }
 
-
-
     }
 }

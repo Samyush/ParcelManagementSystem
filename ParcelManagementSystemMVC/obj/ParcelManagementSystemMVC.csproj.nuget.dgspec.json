@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystems\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj": {}
+    "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystem\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystems\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj": {
+    "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystem\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystems\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
+        "projectUniqueName": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystem\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
         "projectName": "ParcelManagementSystemMVC",
-        "projectPath": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystems\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
+        "projectPath": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystem\\ParcelManagementSystem\\ParcelManagementSystemMVC\\ParcelManagementSystemMVC.csproj",
         "packagesPath": "C:\\Users\\bisha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystems\\ParcelManagementSystem\\ParcelManagementSystemMVC\\obj\\",
+        "outputPath": "C:\\Users\\bisha\\OneDrive\\Desktop\\codeology\\ParcelManagementSystem\\ParcelManagementSystem\\ParcelManagementSystemMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,9 +45,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "FluentAssertions": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.10.0, )"
+              "version": "[6.0.15, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -67,7 +67,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.3, )"
+              "version": "[6.0.15, )"
             }
           },
           "imports": [
