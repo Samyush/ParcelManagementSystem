@@ -1,0 +1,131 @@
+﻿<div class="container my-2">
+    <div class="row">
+        <div class="col-4">
+            <div class="row">
+                <div class="col-4">
+                    <label for="Location" class="col-form-label">Location</label>
+                </div>
+                <div class="col-6">
+                    <select class="form-select mb-3" disabled id="Location">
+                        <option selected>Delhi</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for="NextNode" class="col-form-label">NextNode</label>
+                </div>
+                <div class="col-6">
+                    <select class="form-select mb-3" id="NextNode">
+                        <option value="" disabled selected>ComboBox</option>
+                        <option>Delhi</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <label for="ShipmentStatus" class="col-form-label">Shipment Status</label>
+                </div>
+                <div class="col-6">
+                    <select class="form-select mb-3">
+                        <option value="" disabled selected>ComboBox</option>
+                        <option>Arrived</option>
+                        <option>InTransit</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="row">
+                <div class="col-4 mb-3">
+                    <label for="date" class="col-form-label">Date</label>
+                </div>
+                <div class="col-6">
+                    <input type="date" class="form-control" id="date">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4 mb-3">
+                    <label for="time" class="col-form-label">Time</label>
+                </div>
+                <div class="col-6">
+                    <input type="time" class="form-control" id="time">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4 mb-3">
+                    <label for="VehicleNumber" class="col-form-label">Vehicle Number</label>
+                </div>
+                <div class="col-6">
+                    <input type="text" class="form-control" id="VehicleNumber">
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="row">
+                <div class="col-4 mb-3">
+                    <label for="Reason" class="col-form-label">Reason</label>
+                </div>
+                <div class="col-6 mb-3">
+                    <input type="text" class="form-control h-100" id="Reason">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 mb-3">
+                    <label for="Upload" class="col-form-label">Upload Copy of Identification</label>
+                </div>
+                <div class="col-6">
+                    <input type="file" class="" id="Upload">
+                </div>
+            </div>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+
+            <button class="btn btn-primary">Update Status</button>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <a href="" class="text-end">Export to Excel</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Location</th>
+                <th scope="col">Next Node</th>
+                <th scope="col">Date</th>
+                <th scope="col">Time</th>
+                <th scope="col">Shipment Status</th>
+                <th scope="col">Vehicle Number</th>
+                <th scope="col">Reason</th>
+                <th scope="col">Modified By</th>
+                <th scope="col">Modified TS</th>
+                <th scope="col">Origin</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Document</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="col">Location</td>
+                <td scope="col">Next Node</td>
+                <td scope="col">Date</td>
+                <td scope="col">Time</td>
+                <td scope="col">Shipment Status</td>
+                <td scope="col">Vehicle Number</td>
+                <td scope="col">Reason</td>
+                <td scope="col">Modified By</td>
+                <td scope="col">Modified TS</td>
+                <td scope="col">Origin</td>
+                <td scope="col">Destination</td>
+                <td scope="col">Document</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
