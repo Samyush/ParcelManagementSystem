@@ -20,5 +20,9 @@ namespace ParcelManagementSystemMVC.Controllers
         {
             return View();
         }
+        public IActionResult UpdateParcelStatus()
+        {
+            return View();
+        }
     }
 }
