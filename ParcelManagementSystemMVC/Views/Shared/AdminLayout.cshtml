@@ -1,29 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
-    <meta name="author" content="AdminKit">
-    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+	<meta name="author" content="AdminKit">
+	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="shortcut icon" href="~/adminkit/img/icons/icon-48x48.png" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="shortcut icon" href="~/adminkit/img/icons/icon-48x48.png" />
 
-    <link rel="canonical" href="https://demo-basic.adminkit.io/" />
+	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
 	<title>@ViewData["Title"] - ParcelManagementSystemMVC</title>
 
-    <link href="~/adminkit/css/app.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+	<link href="~/adminkit/css/app.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="wrapper">
 		<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
 				<a class="sidebar-brand" asp-controller="Home" asp-action="Index">
-					<span class="align-middle">AdminPage</span>
+					<span class="align-middle">Master Admin Panel</span>
 				</a>
 
 				<ul class="sidebar-nav">
@@ -32,58 +32,63 @@
 					</li>
 
 					<li class="sidebar-item active">
-						<a class="sidebar-link" asp-controller="Parcel" asp-action="DashBoard">
+						<a class="sidebar-link" asp-controller="AdminUser" asp-action="DashBoard">
 							<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
 						</a>
 					</li>
+
 					<li class="sidebar-header">
-						Parcel
+						Branch Management
 					</li>
 					<li class="sidebar-item">
-						<a class="sidebar-link" asp-controller="Parcel" asp-action="AddParcel" >
-							<i class="align-middle" data-feather="plus"></i> <span class="align-middle">Add New Parcel</span>
+						<a class="sidebar-link" asp-controller="AdminUser" asp-action="AddBranch">
+							<i class="align-middle" data-feather="layers"></i> <span class="align-middle">Add Branch</span>
 						</a>
 					</li>
-
 					<li class="sidebar-item">
-						<a class="sidebar-link" asp-controller="Parcel" asp-action="ParcelList">
-							<i class="align-middle" data-feather="package"></i> <span class="align-middle">Parcel List</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" asp-controller="Parcel" asp-action="TrackParcel">
-							<i class="align-middle" data-feather="activity"></i> <span class="align-middle">Track Parcel</span>
+						<a class="sidebar-link" asp-controller="AdminUser" asp-action="BranchList">
+							<i class="align-middle" data-feather="layers"></i> <span class="align-middle">Branch List</span>
 						</a>
 					</li>
 					<li class="sidebar-header">
-						User
+						User Management
 					</li>
 					<li class="sidebar-item">
-						<a class="sidebar-link" asp-controller="User" asp-action="AddUser">
+						<a class="sidebar-link" asp-controller="AdminUser" asp-action="AddUser">
 							<i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Add New User</span>
 						</a>
 					</li>
 					<li class="sidebar-item">
-						<a class="sidebar-link" asp-controller="User" asp-action="UserList">
+						<a class="sidebar-link" asp-controller="AdminUser" asp-action="UserList">
 							<i class="align-middle" data-feather="users"></i> <span class="align-middle">User List</span>
 						</a>
 					</li>
 
 					<li class="sidebar-header">
-						Settings
+						Role Management
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-buttons.html">
-							<i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
+						<a class="sidebar-link" asp-controller="AdminUser" asp-action="AddRole">
+							<i class="align-middle" data-feather="layers"></i> <span class="align-middle">Add New Role</span>
+						</a>
+						<a class="sidebar-link" asp-controller="AdminUser" asp-action="RoleList">
+							<i class="align-middle" data-feather="layers"></i> <span class="align-middle">Role List</span>
 						</a>
 					</li>
 
-					
+					<li class="sidebar-header">
+						Access Management
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" asp-controller="AdminUser" asp-action="AccessManagement">
+							<i class="align-middle" data-feather="settings"></i> <span class="align-middle">Access Management</span>
+						</a>
+
 				</ul>
 
-				
+
 			</div>
 		</nav>
 
@@ -95,7 +100,7 @@
 
 				<div class="navbar-collapse collapse">
 					<a class="btn dropdown-toggle d-none d-sm-inline-block " data-bs-toggle="dropdown">
-						<span class="text-dark">AdminPage</span>
+						<span class="text-dark">Master AdminPage</span>
 					</a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" asp-controller="Parcel" asp-action="Dashboard"> AdminPage</a>
@@ -103,10 +108,6 @@
 
 					</div>
 					<ul class="navbar-nav navbar-align">
-						<li class="navbar-item"><a class="btn btn-primary m-1" asp-controller="Parcel" asp-action="AddParcel">New Parcel</a></li>
-						<li class="navbar-item"><a class="btn btn-secondary m-1" asp-controller="Parcel" asp-action="TrackParcel">Track Parcel</a></li>
-						
-						
 						<li class="nav-item dropdown">
 							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
 								<i class="align-middle" data-feather="more-vertical"></i>
@@ -129,11 +130,11 @@
 				</div>
 			</nav>
 			<div class="container-fluid m-3">
-			<main>@RenderBody()</main>
+				<main>@RenderBody()</main>
 			</div>
-			
+
 		</div>
-		
+
 	</div>
 	<footer class="border-top footer text-muted">
 		<div class="container">
@@ -142,12 +143,13 @@
 	</footer>
 
 
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-@*<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-*@<script src="~/adminkit/js/app.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	@*<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	*@
+	<script src="~/adminkit/js/app.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
 
 
-@await RenderSectionAsync("Scripts", false)
+	@await RenderSectionAsync("Scripts", false)
 </body>
 </html>
