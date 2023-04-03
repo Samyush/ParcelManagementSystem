@@ -24,5 +24,9 @@ namespace ParcelManagementSystemMVC.Controllers
         {
             return View();
         }
+        public IActionResult Setting()
+        {
+            return View();
+        }
     }
 }
