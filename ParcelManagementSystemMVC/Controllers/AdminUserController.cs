@@ -8,6 +8,14 @@ namespace ParcelManagementSystemMVC.Controllers
         {
             return View();
         }
+        public IActionResult AddUser()
+        {
+            return View();
+        }
+        public IActionResult UserList()
+        {
+            return View();
+        }
     }
 }
 
