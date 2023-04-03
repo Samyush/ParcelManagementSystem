@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ParcelManagementSystemMVC.DBContext.User
 {
-    public class AdminClass
+    public class AdminUser
     {
         [Key]
         public int Admin_Id { get; set; }

@@ -19,9 +19,9 @@ namespace ParcelManagementSystemMVC.DBContext
         [ForeignKey("Parcel_Id")]
         public Parcel.Parcel parcel { get; set; }
 
-        public int User_Id { get; set; }
+       /* public int User_Id { get; set; }
         [ForeignKey("User_Id")]
-        public User.User UserBranch { get; set; }
+        public User.User UserBranch { get; set; }*/
 
 
     }

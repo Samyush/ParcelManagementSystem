@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ParcelManagementSystemMVC.DBContext;
+using ParcelManagementSystemMVC.DBContext.Parcel;
 using ParcelManagementSystemMVC.Models;
 
 namespace ParcelManagementSystemMVC.Controllers;

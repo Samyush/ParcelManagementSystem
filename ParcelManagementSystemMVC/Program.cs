@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ParcelManagementSystemMVC.DBContext;
 using ParcelManagementSystemMVC.DBContext.Parcel;
@@ -9,6 +10,9 @@ builder.Services.AddControllersWithViews();
 var provider =builder.Services.BuildServiceProvider();
 var configuration = provider.GetService<IConfiguration>();
 builder.Services.AddDbContext<ParcelDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("myconn")));
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<ParcelDBContext>()
+    .AddDefaultTokenProviders();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

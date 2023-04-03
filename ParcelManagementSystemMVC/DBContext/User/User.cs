@@ -1,10 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-<<<<<<<< HEAD:ParcelManagementSystemMVC/DBContext/User/User.cs
 namespace ParcelManagementSystemMVC.DBContext.User
-========
-namespace ParcelManagementSystemMVC.DBContext.Users
->>>>>>>> 85b107f41a5c053c0cc18363d4e886d92a2d0902:ParcelManagementSystemMVC/DBContext/Users/NewUser.cs
+
 {
     public class User
     {
