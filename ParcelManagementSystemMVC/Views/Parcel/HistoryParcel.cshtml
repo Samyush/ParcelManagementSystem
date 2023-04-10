@@ -1,0 +1,101 @@
+﻿<form>
+    <div>
+       <h1>
+            History Of Parcel : NM123444
+
+        </h1>
+    </div>
+    <div class="excel-btn d-flex justify-content-end col-11">
+        <button id="downloadexcel" class="btn border-0"><i class="fa-solid fa-file-export"></i></button>
+        <label>Export to Excel</label>
+    </div>
+    <div class="container mt-3 ">
+        <table id="example-table" class="table table-striped table-bordered  table-hover ">
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Next Node</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Shipment status</th>
+                    <th>Vehicle Number</th>
+                    <th>Reason</th>
+                    <th>Modified By</th>
+                    <th>Modified TS</th>
+                    <th>Origin</th>
+                    <th>Destination</th>
+                    <th>Documents</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Delhi</td>
+                    <td>Kalkota</td>
+                    <td>pending</td>
+                    <td>0/23/2023</td>
+                    <td>4:00PM</td>
+                    <td>Collection</td>
+                    <td></td>
+                    <td></td>
+                    <td>Subek Shakya</td>
+                    <td>1/24/2023</td>
+                    <td>Delhi</td>
+                    <td>Janakpur</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Delhi</td>
+                    <td>Kalkota</td>
+                    <td>pending</td>
+                    <td>0/23/2023</td>
+                    <td>4:00PM</td>
+                    <td>Collection</td>
+                    <td></td>
+                    <td></td>
+                    <td>Subek Shakya</td>
+                    <td>1/24/2023</td>
+                    <td>Delhi</td>
+                    <td>Janakpur</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Delhi</td>
+                    <td>Kalkota</td>
+                    <td>pending</td>
+                    <td>0/23/2023</td>
+                    <td>4:00PM</td>
+                    <td>Collection</td>
+                    <td></td>
+                    <td></td>
+                    <td>Subek Shakya</td>
+                    <td>1/24/2023</td>
+                    <td>Delhi</td>
+                    <td>Janakpur</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Delhi</td>
+                    <td>Kalkota</td>
+                    <td>pending</td>
+                    <td>0/23/2023</td>
+                    <td>4:00PM</td>
+                    <td>Collection</td>
+                    <td></td>
+                    <td></td>
+                    <td>Subek Shakya</td>
+                    <td>1/24/2023</td>
+                    <td>Delhi</td>
+                    <td>Janakpur</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            document.getElementById('downloadexcel').addEventListener('click', function () {
+                var table2excel = new table2excel();
+                table2excel.export(document.querySelectorAll("#example-table"));
+            });
+        </script>
+    </div>
+</form>

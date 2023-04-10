@@ -1,0 +1,192 @@
+﻿@{
+    Layout = "PublicLayout";
+}
+<div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Home">Home</a></li>
+        </ol>
+    </nav>
+</div>
+<div class="Main">
+    <div class="container border border-1 p-4 w-75 ms-7">
+        <div class="row">
+            <div class="col-3">
+                <p>Way Bill Number :</p>
+            </div>
+            <div class="col-6">
+                <div class="form">
+                    <i class="fa fa-search"></i>
+                    <input type="text" class="form-control" placeholder="   Enter Bill Ways Number" />
+                    <span class="left-pan"><i class="fa fa-microphone"></i></span>
+                </div>
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-primary">Search</button>
+            </div>
+        </div>
+    </div>
+    <div class="Parcel mt-4 ms-7">
+        <p><b><u>Parcel Details</u></b></p>
+    </div>
+    
+
+    <div class="row">
+        <div class="col-md-4">
+            <p>Way Bill Number : NM123444</p>
+        </div>
+        <div class="col-md-4">
+            <p>Actual Weight : 5 Kg</p>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <p>
+                Date : 01/24/2023
+            </p>
+        </div>
+        <div class="col-md-4">
+            <p>Rate / Kg : Rs. 500g</p>
+        </div>
+        <div class="col-md-4">
+            <p>To Pay Rs. : 300</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <p>Time : 4:00 PM</p>
+        </div>
+        <div class="col-md-4">
+            <p>Lorry No : 222g</p>
+        </div>
+        <div class="col-md-4">
+            <p> Due Paid : 200  </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <p> No. Of Packets : 4</p>
+        </div>
+        <div class="col-md-4">
+            <p>TIN No : 773</p>
+        </div>
+        <div class="col-md-4">
+            <p>Value Of Goods Rs. : 4500</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <p> Description of Goods : </p>
+        </div>
+        <div class="col-md-4">
+            <p>VAT : 780</p>
+        </div>
+        <div class="col-md-4">
+            <p>G Total : 500</p>
+        </div>
+    </div>
+    <div class="row ms-5 mt-4">
+        <div class="col-md-6">
+            <label><b>Sender Details</b></label>
+        </div>
+        <div class="col-md-6">
+            <label><b>Receiver Details</b></label>
+        </div>
+    </div>
+    <div class="row ms-7 mt-2">
+        <div class="col-md-6">
+            <p>Name :  ABCDE</p>
+        </div>
+        <div class="col-md-6">
+            <p>Name : XYZZZ</p>
+        </div>
+    </div>
+    <div class="row ms-7">
+        <div class="col-md-6">
+            <p>Address : Delhi</p>
+        </div>
+        <div class="col-md-6">
+            <p>Address : Janakpur</p>
+        </div>
+    </div>
+    <div class="row ms-7">
+        <div class="col-md-6">
+            <p>Phone Number : +91-9283744477 </p>
+        </div>
+        <div class="col-md-6">
+            <p>Phone Number : +91-9293300222</p>
+        </div>
+    </div>
+    
+</div>
+<div class="container mt-4">
+    <div class="row ">
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body bg-success">
+                    <p class="card-title ms-7">Origin</p>
+                    <p class="ms-7">Delhi</p>
+                    <p>Collected : 01/23/2023 | 4:00PM</p>
+                    <p>Shipped : 01/23/2023 | 5:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card bg-success">
+                <div class="card-body">
+                    <p class="card-title ms-7">In Transit</p>
+                    <p class="ms-7"> Kolkata</p>
+                    <p>
+                        Collected : 01/24/2023 | 3:30PM
+                    </p>
+                    <p>
+                        Shipped : 01/24/2023 | 5:00 PM
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body bg-warning">
+                    <p class="card-title ms-7">In Transit</p>
+                    <p class="ms-7"> Kolkata</p>
+                    <p>Collected : 01/24/2023 | 3:30P</p>
+                    <p>Shipped : 01/24/2023 | 5:00 P</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body bg-warning">
+                    <p class="card-title ms-7">In Transit</p>
+                    <p class="ms-7"> Kolkata</p>
+                    <p>
+                        Collected : 01/24/2023 | 3:30PM
+                    </p>
+                    <p>
+                        Shipped : 01/24/2023 | 5:00 PM
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="row p-2 ms-6">
+    <div class="col-3">
+        <label>Completed</label>
+    </div>
+    <div class="col-3">
+        <label>Completed</label>
+    </div>
+    <div class="col-3">
+        <label>Pending</label>
+    </div>
+    <div class="col-3">
+        <label>Pending</label>
+    </div>
+</div>
+<div class="d-grid gap-3 d-md-flex justify-content-md-end me-5">
+    <button class="btn btn-outline-primary" type="button">Print</button>
+</div>

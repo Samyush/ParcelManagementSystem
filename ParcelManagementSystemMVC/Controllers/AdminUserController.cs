@@ -17,11 +17,20 @@ namespace ParcelManagementSystemMVC.Controllers
         {
             return View();
         }
+
         public IActionResult RoleList()
         {
             return View();
         }
 
+        public IActionResult AddBranch()
+        {
+            return View();
+        }
+        public IActionResult BranchList()
+        {
+            return View();
+        }
     }
 }
 
