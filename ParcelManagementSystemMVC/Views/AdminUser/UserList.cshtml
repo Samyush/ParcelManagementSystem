@@ -1,0 +1,109 @@
+﻿@{
+    ViewData["Title"] = "UserList";
+    Layout = "AdminLayout";
+}
+
+
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Parcel" asp-action="Dashboard">Home</a></li>
+        <li class="breadcrumb-item">User</li>
+        <li class="breadcrumb-item active" aria-current="page">User List</li>
+    </ol>
+</nav>
+
+<div class="container-fluid my-2">
+    <h4>Filter</h4>
+    <div class="row">
+        <div class="col-4">
+            <div class="row mb-3">
+                <label for="branch" class="col-6 col-form-label  text-end">Branch</label>
+                <div class="col-6">
+                    <select class="form-select" id="branch">
+                        <option selected>Combobox</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="state" class="col-6 col-form-label  text-end">State</label>
+                <div class="col-6">
+                    <select class="form-select" id="state">
+                        <option selected>Combobox</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="row mb-3">
+                <label for="firstname" class="col-6 col-form-label  text-end">First Name</label>
+                <div class="col-6">
+                    <input type="text" class="form-control" id="firstname" />
+
+
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="country" class="col-6 col-form-label  text-end">Country</label>
+                <div class="col-6">
+                    <select class="form-select" id="country">
+                        <option selected>Combobox</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="row mb-3">
+                <label for="lastname" class="col-6 col-form-label  text-end">Last Name</label>
+                <div class="col-6">
+                    <input type="text" class="form-control" id="lastname" />
+                </div>
+            </div>
+            <div class="col-6 d-grid gap-2 d-md-flex justify-content-md-end">
+
+                <button class="btn btn-primary">Search</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid">
+    <a href="" class="text-end">Export to Excel</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Branch</th>
+                <th scope="col">City</th>
+                <th scope="col">State</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">External</th>
+                <th scope="col">Role</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="col">First Name</td>
+                <td scope="col">Last Name</td>
+                <td scope="col">Branch</td>
+                <td scope="col">City</td>
+                <td scope="col">State</td>
+                <td scope="col">Email</td>
+                <td scope="col">Phone Number</td>
+                <td scope="col">External</td>
+                <td scope="col">Role</td>
+                <td scope="col">
+                    <div class="d-grid d-md-flex ">
+                        <button class="btn btn-primary btn-sm">Edit</button>
+                        <button class="btn btn-danger  ms-1 btn-sm">De-activate</button>
+                        <button class="btn btn-success  ms-1 btn-sm">Delete</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,89 @@
+﻿<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Parcel" asp-action="Dashboard">Home</a></li>
+        <li class="breadcrumb-item">Parcel</a></li>
+        <li class="breadcrumb-item active" aria-current="page">ParcelList</li>
+    </ol>
+</nav>
+
+<div class="container-fluid my-2">
+    <h4>Filter</h4>
+    <div class="row">
+        <div class="col-2">
+            <div class="row">
+                <label for="WaybillNumber" class="col-6 col-form-label  text-end">WayBillNumber</label>
+                <div class="col-6">
+                    <input type="text" class="form-control" id="WaybillNumber">
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="row">
+                <label for="SenderName" class="col-6 col-form-label  text-end">Sender Name</label>
+                <div class="col-6">
+                    <input type="text" class="form-control" id="SenderName">
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="row">
+                <label for="ReceiverName" class="col-7 col-form-label  text-end">Receiver Name</label>
+                <div class="col-5">
+                    <input type="text" class="form-control" id="ReceiverName">
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="row">
+                <label for="Date" class="col-4 col-form-label text-end">Date</label>
+                <div class="col-8">
+                    <input type="date" class="form-control" id="Date">
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <button class="btn btn-primary w-50">Search</button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <a href="" class="text-end">Export to Excel</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">WayBillNumber</th>
+                <th scope="col">Entry Date and Time</th>
+                <th scope="col">Branch Code</th>
+                <th scope="col">Sender Name</th>
+                <th scope="col">Sender Address</th>
+                <th scope="col">Receiver Name</th>
+                <th scope="col">Receiver Address</th>
+                <th scope="col">Status</th>
+                <th scope="col">Location</th>
+                <th scope="col">History of Parcel</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="col">WayBillNumber</td>
+                <td scope="col">Entry Date and Time</td>
+                <td scope="col">Branch Code</td>
+                <td scope="col">Sender Name</td>
+                <td scope="col">Sender Address</td>
+                <td scope="col">Receiver Name</td>
+                <td scope="col">Receiver Address</td>
+                <td scope="col">Status</td>
+                <td scope="col">Location</td>
+                <td scope="col">History of Parcel</td>
+                <td scope="col">
+                    <div class="d-grid gap-2 d-md-flex">
+                        <button class="btn btn-primary btn-sm">Update</button>
+                        <button class="btn btn-danger  ms-1 btn-sm">Delete</button>
+                        <button class="btn btn-success  ms-1 btn-sm">View</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,151 @@
+﻿<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Parcel" asp-action="Dashboard">Home</a></li>
+        <li class="breadcrumb-item">User</li>
+        <li class="breadcrumb-item active" aria-current="page">Add New</li>
+    </ol>
+</nav>
+
+<div class="row">
+    <div class="col-5">
+        <div class="row mb-2">
+            <div class="col-4">
+                <label for="firstname" class="form-label">First Name</label>
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" id="firstname" />
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4">
+                <label for="lastname" class="form-label">Last Name</label>
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" id="lastname" />
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4">
+                <label for="street" class="form-label">Street</label>
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" id="street" />
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4">
+                <label for="city" class="form-label">City</label>
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" id="city" />
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4">
+                <label for="state" class="form-label">State</label>
+            </div>
+            <div class="col-6">
+                <input class="form-control" id="state" />
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4">
+                <label for="country" class="form-label">Country</label>
+            </div>
+            <div class="col-6">
+                <input class="form-control" id="country" />
+            </div>
+        </div>
+    </div>
+    <div class="col-5">
+        <div class="row mb-2">
+            <div class="col-4">
+                <label for="branch" class="form-label">Branch</label>
+            </div>
+            <div class="col-6">
+                <input class="form-control" id="branch" />
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4">
+                <label for="phoneNumber" class="form-label">PhoneNumber</label>
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" id="phoneNumber" />
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4">
+                <label for="email" class="form-label">Email</label>
+            </div>
+            <div class="col-6">
+                <input type="email" class="form-control" id="email" />
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4">
+                <label for="branch" class="form-label">Is External</label>
+            </div>
+            <div class="col-6">
+                <input type="checkbox" class="form-check" id="branch" />
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4">
+                <label for="username" class="form-label">Username</label>
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" id="username" />
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4">
+                <label for="password" class="form-label">Password</label>
+            </div>
+            <div class="col-6">
+                <input class="form-control" id="password" />
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4">
+                <label for="accessrole" class="form-label">Access Role</label>
+            </div>
+            <div class="col-6">
+                <select class="form-select" id="accessrole">
+                    <option selected disabled>ComboBox</option>
+                    <option>Read</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-2 justify-content-center">
+
+        <div class="h-75">
+        <p><img id="output" height="250" width="150" /></p>
+        </div>
+
+        
+        <p><label for="userimage" style="cursor: pointer;">Upload Image</label></p>
+        
+        <p><input type="file" accept="image/*" name="userimage" id="userimage" onchange="loadFile(event)" style="display: none;"></p>
+        <script>
+            var loadFile = function (event) {
+                var image = document.getElementById('output');
+                image.src = URL.createObjectURL(event.target.files[0]);
+            };
+        </script>
+
+    </div>
+</div>
+<div class="container">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-5">
+
+
+        <button class="btn btn-primary" type="submit">Save</button>
+        <button class="btn btn-primary">Save and Enter New Parcel</button>
+        <button class="btn btn-primary" type="reset">Reset</button>
+
+    </div>
+</div>

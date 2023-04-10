@@ -1,0 +1,156 @@
+﻿
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Parcel" asp-action="Dashboard">Home</a></li>
+        <li class="breadcrumb-item">Parcel</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Add New Parcel</li>
+    </ol>
+</nav>
+<form action="">
+<div class="row">
+    <div class="col-7">
+        
+
+        <h3>Sender Information</h3>
+        <div class="card col-8">
+            <div class="m-3 row">
+                <label for="SName" class="col-4 col-form-label">Sender Default Name:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="SName">
+                </div>
+            </div>
+            <div class="m-3 row">
+                    <label for="SAddress" class="col-4 col-form-label">Sender Default Address:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="SAddress">
+                </div>
+            </div>
+            <div class="m-3 row">
+                    <label for="SPhoneNumber" class="col-4 col-form-label">Sender Default Phone Number:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="SPhoneNumber">
+                </div>
+            </div>
+            <h6>Email Notifications:</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Parcel arrived at destination 
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Parcel arrived at transit
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Parcel cancelled
+                    </label>
+                </div>
+        </div>
+       
+
+    </div>
+
+    <div class="col-5">
+         <div class="mb-3 row">
+            <label for="language" class="col-3 col-form-label">Language:</label>
+            <div class="col-4">
+                <select class="form-select mb-3">
+
+                   @* <option selected>Collected</option>
+                    <option>InTransit</option>*@
+
+                </select>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="font" class="col-3 col-form-label">Font Size:</label>
+            <div class="col-4">
+                <select class="form-select mb-3">
+
+                   @* <option selected>Collected</option>
+                    <option>InTransit</option>*@
+
+                </select>
+            </div>
+        </div>
+        <h6>Theme:</h6>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" >
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Dark
+                </label>
+
+
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" checked >
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Light
+                </label>
+            </div>
+            <div class="mb-3 row">
+                <label for="date" class="col-3 col-form-label">Date Format:</label>
+                <div class="col-4">
+                    <select class="form-select mb-3">
+
+                        @* <option selected>Collected</option>
+                        <option>InTransit</option>*@
+
+                    </select>
+                </div>
+            </div> 
+            <div class="mb-3 row">
+                <label for="time" class="col-3 col-form-label">Time Format:</label>
+                <div class="col-4">
+                    <select class="form-select mb-3">
+
+                        @* <option selected>Collected</option>
+                        <option>InTransit</option>*@
+
+                    </select>
+                </div>
+            </div>
+            
+             <div class="mb-3 row">
+                <label for="time" class="col-3 col-form-label">Time Format:</label>
+                <div class="col-4">
+                    <select class="form-select mb-3">
+
+                        @* <option selected>Collected</option>
+                        <option>InTransit</option>*@
+
+                    </select>
+                </div>
+            
+             </div> 
+             <div class="mb-3 row">
+                <label for="currency" class="col-3 col-form-label">Currency:</label>
+                <div class="col-4">
+                    <select class="form-select mb-3">
+
+                        @* <option selected>Collected</option>
+                        <option>InTransit</option>*@
+
+                    </select>
+                </div>
+            </div>
+        
+            
+</div>
+    </div>
+    <div class="container">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+
+            <button class="btn btn-primary">Submit</button>
+
+            <button class="btn btn-primary" type="reset">Reset</button>
+
+        </div>
+    </div>
+</div>
+</form>

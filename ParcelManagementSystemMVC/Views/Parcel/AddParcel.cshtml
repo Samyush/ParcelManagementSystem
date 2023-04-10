@@ -1,0 +1,173 @@
+﻿<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Parcel" asp-action="Dashboard">Home</a></li>
+        <li class="breadcrumb-item">Parcel</li>
+        <li class="breadcrumb-item active" aria-current="page">Add New Parcel</li>
+    </ol>
+</nav>
+<form action="">
+<div class="row">
+    <div class="col-7">
+        <div class="mb-3 row">
+            <label for="date" class="col-3 col-form-label">Date:</label>
+            <div class="col-4">
+                <input type="date" class="form-control" id="date">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="waybillnumber" class="col-3 col-form-label">Way Bill Number:</label>
+            <div class="col-4">
+                <input type="text" class="form-control" id="waybillnumber">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="date" class="col-3 col-form-label">Shipment Status:</label>
+            <div class="col-4">
+                <select class="form-select mb-3">
+
+                    <option selected>Collected</option>
+                    <option>InTransit</option>
+
+                </select>
+            </div>
+        </div>
+
+        <h3>Sender Information</h3>
+        <div class="card col-8">
+            <div class="m-3 row">
+                <label for="SName" class="col-4 col-form-label">Name:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="SName">
+                </div>
+            </div>
+            <div class="m-3 row">
+                <label for="SAddress" class="col-4 col-form-label">Address:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="SAddress">
+                </div>
+            </div>
+            <div class="m-3 row">
+                <label for="SPhoneNumber" class="col-4 col-form-label">PhoneNumber:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="SPhoneNumber">
+                </div>
+            </div>
+        </div>
+        <h3>Receiver Information</h3>
+        <div class="card col-8">
+            <div class="m-3 row">
+                <label for="RName" class="col-4 col-form-label">Name:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="RName">
+                </div>
+            </div>
+            <div class="m-3 row">
+                <label for="RAddress" class="col-4 col-form-label">Address:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="RAddress">
+                </div>
+            </div>
+            <div class="m-3 row">
+                <label for="RPhoneNumber" class="col-4 col-form-label">PhoneNumber:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="RPhoneNumber">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-5">
+        <h3>Package Details</h3>
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <label for="NoPackets" class="col-6 col-form-label">No. Of Packets</label>
+                    <div class="col-5 mb-3">
+                        <input type="text" class="form-control" id="NoPackets">
+                    </div>
+                    <label for="DescOfGoods" class="col-6 col-form-label">Description of Goods</label>
+                    <div class="col-5 mb-3">
+                        <input type="text" class="form-control" id="DescOfGoods">
+                    </div>
+                    <label for="ActualWeight" class="col-6 col-form-label">Actual Weight</label>
+                    <div class="col-5 mb-3">
+                        <input type="text" class="form-control" id="ActualWeight">
+                    </div>
+                    <label for="ValueOfGoods" class="col-6 col-form-label">
+                        Value Of Goods Rs.
+                    </label>
+                    <div class="col-5 mb-3">
+                        <input type="text" class="form-control" id="ValueOfGoods">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <label for="LorryNo" class="col-4 col-form-label">Lorry No</label>
+                    <div class="col-5 mb-3">
+                        <input type="text" class="form-control" id="LorryNo">
+                    </div>
+                    <label for="TinNo" class="col-4 col-form-label">Tin No</label>
+                    <div class="col-5 mb-3">
+                        <input type="text" class="form-control" id="TinNo">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <h3>Charges</h3>
+
+
+        <div class="col-8">
+            <div class="row">
+                <label for="Rate" class="col-3 col-form-label">Rate / Kg Rs.</label>
+                <div class="col-4 mb-3">
+                    <input type="text" class="form-control" id="Rate">
+                </div>
+            </div>
+            <div class="row">
+                <label for="ToPay" class="col-3 col-form-label">To Pay Rs.</label>
+                <div class="col-4 mb-3">
+                    <input type="text" class="form-control" id="ToPay">
+                </div>
+            </div>
+            <div class="row">
+                <label for="DuePaid" class="col-3 col-form-label">
+                    Due Paid
+                </label>
+                <div class="col-4 mb-3">
+                    <input type="text" class="form-control" id="DuePaid">
+                </div>
+            </div>
+            <div class="row">
+                <label for="Vat" class="col-3 col-form-label">VAT</label>
+                <div class="col-4 mb-3">
+                    <input type="text" class="form-control" id="Vat">
+                </div>
+            </div>
+            <div class="row">
+                <label for="GTotal" class="col-3 col-form-label">
+                    G Total :
+                </label>
+                <div class="col-4 mb-3">
+                    <input type="text" class="form-control" id="GTotal">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+          
+            <button class="btn btn-primary">Print</button>
+            <button class="btn btn-primary" type="submit">Save</button>
+            <button class="btn btn-primary">Save and Enter New Parcel</button>
+            <button class="btn btn-primary" type="reset">Reset</button>
+            
+        </div>
+    </div>
+</div>
+</form>
