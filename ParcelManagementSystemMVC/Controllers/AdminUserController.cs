@@ -12,10 +12,16 @@ namespace ParcelManagementSystemMVC.Controllers
         {
             return View();
         }
-        public IActionResult UserList()
+        
+        public IActionResult AddRole()
         {
             return View();
         }
+        public IActionResult RoleList()
+        {
+            return View();
+        }
+
     }
 }
 
