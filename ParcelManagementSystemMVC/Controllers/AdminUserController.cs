@@ -16,6 +16,10 @@ namespace ParcelManagementSystemMVC.Controllers
         {
             return View();
         }
+        public IActionResult AccessAdmin()
+        {
+            return View();
+        }
     }
 }
 
