@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "AccessAdmin";
+    Layout = "AdminLayout";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="AdminUser" asp-action="Dashboard">Home</a></li>
+        <li class="breadcrumb-item">Access</li>
+       
+    </ol>
+</nav>
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Role Name</th>
+                <th scope="col">View</th>
+                <th scope="col">Manage</th>
+                <th scope="col">Delete</th>
+                <th scope="col">Export</th>
+                <th scope="col">Actions</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="col">Admin</td>
+                <td scope="col"><input type="checkbox"/></td>
+                <td scope="col"><input type="checkbox" /></td>
+                <td scope="col"><input type="checkbox" /></td>
+                <td scope="col"><input type="checkbox" /></td>
+                <td scope="col"><button class="btn btn-danger">Delete</button></td>
+                
+                
+                    
+                
+            </tr>
+        </tbody>
+    </table>
+    <div class="d-grid d-md-flex float-end">
+        <button class="btn btn-primary btn-sm">Save</button>
+
+    </div>
+</div>
