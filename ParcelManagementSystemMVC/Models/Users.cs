@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace ParcelManagementSystemMVC.Models;
 
-public class Users
+public class Users : IdentityUser
 {
     [Key]
     public int Id { get; set; }
