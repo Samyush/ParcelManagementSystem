@@ -5,3 +5,6 @@ ParcelManagementSystemMVC/bin
 ParcelManagementSystemMVC/obj
 CodeTesterConsoleApp/bin
 CodeTesterConsoleApp/obj
+.vs/
+ParcelManagementSystemMVC/appsettings.json
+
