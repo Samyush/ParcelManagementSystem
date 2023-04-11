@@ -1,4 +1,4 @@
-html {
+/*html {
     font-size: 14px;
 }
 
@@ -15,4 +15,26 @@ html {
 
 body {
     margin-bottom: 60px;
+}*/
+.form .fa-search {
+    position: absolute;
+    top: 12px;
+    left: 9px;
+}
+
+.form {
+    position: relative;
+}
+.form span {
+        position: absolute;
+        right: 17px;
+        top: 8px;
+        padding: 2px;
+        border-left: 1px solid #d1d5db;
+    }
+.fa-solid fa-magnifying-glass {
+    margin-top: 300px;
+}
+.arrow{
+    margin-left:20px;
 }

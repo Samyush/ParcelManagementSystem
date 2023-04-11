@@ -16,7 +16,28 @@ namespace ParcelManagementSystemMVC.Controllers
         {
             return View();
         }
+
         public IActionResult AccessAdmin()
+        {
+            return View();
+        }
+
+        public IActionResult AddRole()
+        {
+            return View();
+        }
+
+        public IActionResult RoleList()
+        {
+            return View();
+        }
+
+        public IActionResult AddBranch()
+        {
+            return View();
+        }
+        public IActionResult BranchList()
+
         {
             return View();
         }

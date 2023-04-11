@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "RoleList";
+    Layout = "AdminLayout";
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Parcel" asp-action="Dashboard">Home</a></li>
+        <li class="breadcrumb-item">Parcel</a></li>
+        <li class="breadcrumb-item active" aria-current="page">ParcelList</li>
+    </ol>
+</nav>
+
+<div class="container-fluid my-2">
+    <h4>Filter</h4>
+    <div class="row">
+        <div class="col-2">
+            <div class="row">
+                <label for="RoleName" class="col-6 col-form-label  text-end">Role Name</label>
+                <div class="col-6">
+                    <input type="text" class="form-control" id="RoleName">
+                </div>
+            </div>
+        </div>
+       
+       
+        <div class="col-2">
+            <div class="row">
+                <label for="Status" class="col-4 col-form-label text-end">Status</label>
+                
+                    <div class="col-4">
+                        <select class="form-select mb-3">
+
+                             <option selected>Active</option>
+                            <option>De-Active</option>
+
+                        </select>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-4">
+            <button class="btn btn-primary w-50">Search</button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <a href="" class="text-end">Export to Excel</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Role Name</th>
+                
+                <th scope="col">Status</th>
+            
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="col">Role Name</td>
+
+                <td scope="col">Status</td>
+              
+                <td scope="col">
+                    <div class="d-grid gap-2 d-md-flex">
+                        <button class="btn btn-primary btn-sm">Update</button>
+                        <button class="btn btn-danger  ms-1 btn-sm">Delete</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
