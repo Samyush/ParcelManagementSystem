@@ -9,17 +9,9 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = API_WebApp
 build_property.RootNamespace = API_WebApp
-<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\ACER\Desktop\New folder\ParcelManagementSystem\API_WebApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\ACER\Desktop\New folder\ParcelManagementSystem\API_WebApp
-=======
-build_property.ProjectDir = C:\Developments\DotNetProjects\Codeology\ParcelManagementSystem\API_WebApp\
-build_property.RazorLangVersion = 6.0
-build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Developments\DotNetProjects\Codeology\ParcelManagementSystem\API_WebApp
->>>>>>> 85b107f41a5c053c0cc18363d4e886d92a2d0902
 build_property._RazorSourceGeneratorDebug = 

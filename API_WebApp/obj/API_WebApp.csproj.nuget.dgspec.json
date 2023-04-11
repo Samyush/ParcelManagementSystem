@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\ACER\\Desktop\\New folder\\ParcelManagementSystem\\API_WebApp\\API_WebApp.csproj": {}
   },
   "projects": {
@@ -16,27 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-    "C:\\Developments\\DotNetProjects\\Codeology\\ParcelManagementSystem\\API_WebApp\\API_WebApp.csproj": {}
-  },
-  "projects": {
-    "C:\\Developments\\DotNetProjects\\Codeology\\ParcelManagementSystem\\API_WebApp\\API_WebApp.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Developments\\DotNetProjects\\Codeology\\ParcelManagementSystem\\API_WebApp\\API_WebApp.csproj",
-        "projectName": "API_WebApp",
-        "projectPath": "C:\\Developments\\DotNetProjects\\Codeology\\ParcelManagementSystem\\API_WebApp\\API_WebApp.csproj",
-        "packagesPath": "C:\\Users\\samyu\\.nuget\\packages\\",
-        "outputPath": "C:\\Developments\\DotNetProjects\\Codeology\\ParcelManagementSystem\\API_WebApp\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\samyu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
->>>>>>> 85b107f41a5c053c0cc18363d4e886d92a2d0902
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,11 +64,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
->>>>>>> 85b107f41a5c053c0cc18363d4e886d92a2d0902
         }
       }
     }
