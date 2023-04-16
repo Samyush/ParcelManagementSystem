@@ -2,8 +2,7 @@
     ViewData["Title"] = "AddBranch";
     Layout = "AdminLayout";
 }
-<form>
-
+@model Branch
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#"><u>Home</u></a></li>
@@ -11,6 +10,8 @@
         <li class="breadcrumb-item active" aria-current="page">Add New</li>
      </ol>
   </nav>
+<form method="post" asp-controller="AdminUser" asp-action="AddBranch">
+
   <div class="main">
       <div class="container">
             <div class="row align-items-center g-4 mt-3">
@@ -18,13 +19,13 @@
                     <label>Branch Name :</label>
                 </div>
                 <div class="col-auto">
-                    <input type="text"  class="form-control">
+                    <input type="text" asp-for="BranchName" class="form-control" id="BName">
                 </div>
                  <div class="col-auto">
-                    <label>Branch Name :</label>
+                    <label>Branch Code :</label>
                 </div>
                 <div class="col-3">
-                    <input type="text" class="form-control" aria-describedby="passwordHelpInline">
+                    <input type="text" asp-for="BranchCode" class="form-control" id="BCode">
                 </div>
             </div>
             <div class="row mt-2">
@@ -32,7 +33,7 @@
                     <label>Street :</label>
                 </div>
                 <div class="col-auto">
-                    <input type="text" class="form-control"/>
+                    <input type="text" asp-for="Street" class="form-control" id="BStreet" />
                 </div>
             </div>
             <div class="row mt-2">
@@ -40,7 +41,7 @@
                     <label>City :</label>
                 </div>
                 <div class="col-auto ms-3">
-                    <input type="text" class="form-control" />
+                    <input type="text" asp-for="City" class="form-control" id="BCity"/>
                 </div>
             </div>
             <div class="row mt-2">
@@ -48,7 +49,7 @@
                     <label>State :</label>
                 </div>
                 <div class="col-auto ms-2">
-                    <input type="text" class="form-control" />
+                    <input type="text" asp-for="State" class="form-control" id="BState"/>
                 </div>
             </div>
             <div class="row mt-2">
@@ -56,11 +57,11 @@
                     <label>Zip Code:</label>
                 </div>
                 <div class="col-auto ms-2">
-                    <input type="text" class="form-control" />
+                    <input type="text" asp-for="ZipCode" class="form-control" id="BZipCode" />
                 </div>
             </div>
             <div class="d-grid gap-lg-2 d-md-flex justify-content-md-center p-2 mt-4 ">
-                <button class="btn btn-outline-primary me-md-2" type="button">Sumbit</button>
+                <button class="btn btn-outline-primary me-md-2" type="submit">Sumbit</button>
                 <button class="btn btn-outline-primary" type="button">Reset</button>
             </div>
       </div>

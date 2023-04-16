@@ -2,7 +2,7 @@
     ViewData["Title"] = "UserList";
     Layout = "AdminLayout";
 }
-
+@model List<Users>
 
 
 <nav aria-label="breadcrumb">
@@ -86,16 +86,17 @@
             </tr>
         </thead>
         <tbody>
+            @foreach(var i in Model){
             <tr>
-                <td scope="col">First Name</td>
-                <td scope="col">Last Name</td>
-                <td scope="col">Branch</td>
-                <td scope="col">City</td>
-                <td scope="col">State</td>
-                <td scope="col">Email</td>
-                <td scope="col">Phone Number</td>
-                <td scope="col">External</td>
-                <td scope="col">Role</td>
+                <td scope="col">@i.FirstName</td>
+                <td scope="col">@i.LastName</td>
+                <td scope="col">@i.Branch</td>
+                <td scope="col">@i.City</td>
+                <td scope="col">@i.State</td>
+                <td scope="col">@i.Email</td>
+                <td scope="col">@i.PhoneNumber</td>
+                <td scope="col">@i.IsExternal</td>
+                <td scope="col">@i.AccessRole</td>
                 <td scope="col">
                     <div class="d-grid d-md-flex ">
                         <button class="btn btn-primary btn-sm">Edit</button>
@@ -104,6 +105,7 @@
                     </div>
                 </td>
             </tr>
+            }
         </tbody>
     </table>
 </div>

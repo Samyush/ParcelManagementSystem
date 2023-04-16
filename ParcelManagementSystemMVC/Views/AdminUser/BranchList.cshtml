@@ -2,6 +2,7 @@
     ViewData["Title"] = "BranchList";
     Layout = "AdminLayout";
 }
+@model List<Branch>
 <form>
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -51,45 +52,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Kolkota</td>
-                            <td>Kol002</td>
-                            <td>Kolkota</td>
-                            <td>West Bengal</td>
-                            <td>04577</td>
-                            <td><u>54</u></td>
-                            <td>Edit/ Delete</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Kolkota</td>
-                            <td>Kol002</td>
-                            <td>Kolkota</td>
-                            <td>West Bengal</td>
-                            <td>04577</td>
-                            <td><u>54</u></td>
-                            <td>Edit/ Delete</td>
-                           
-                        </tr>
-                        <tr>
-                            <td>Kolkota</td>
-                            <td>Kol002</td>
-                            <td>Kolkota</td>
-                            <td>West Bengal</td>
-                            <td>04577</td>
-                            <td><u>54</u></td>
-                            <td>Edit/ Delete</td>
-                           
-                        </tr>
-                        <tr>
-                            <td>Kolkota</td>
-                            <td>Kol002</td>
-                            <td>Kolkota</td>
-                            <td>West Bengal</td>
-                            <td>04577</td>
-                            <td><u>54</u></td>
-                            <td>Edit/ Delete</td>
-                        </tr>
+                        @foreach (var i in Model)
+                        {
+                            <tr>
+                                <td>@i.BranchName</td>
+                                <td>@i.BranchCode</td>
+                                <td>@i.City</td>
+                                <td>@i.State</td>
+                                <td>@i.ZipCode</td>
+                                <td>55</td>
+                                <td scope="col">
+                                    <div class="d-grid d-md-flex ">
+                                        <button class="btn btn-primary btn-sm">Edit</button>
+                                        <button class="btn btn-success  ms-1 btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>
