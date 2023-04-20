@@ -2,7 +2,7 @@
 
 namespace ParcelManagementSystemMVC.Models;
 
-public class Parcels
+public class Parcels :Base
 {
     public int Id { get; set; }
     public string ParcelName { get; set; }
@@ -12,7 +12,7 @@ public class Parcels
     public string ParcelStatus { get; set; }
     public string ParcelLocation { get; set; }
     public string ParcelDestination { get; set; }
-    [ForeignKey("UserId")]
+
     public string ParcelSender { get; set; }
     public string ParcelReceiver { get; set; }
     

@@ -2,7 +2,7 @@
 
 namespace ParcelManagementSystemMVC.Models;
 
-public class Users
+public class Users: Base
 {
     [Key]
     public int Id { get; set; }

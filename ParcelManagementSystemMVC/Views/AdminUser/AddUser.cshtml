@@ -1,9 +1,8 @@
 ﻿@{
-    ViewData["Title"] = "AddRole";
+    ViewData["Title"] = "AddUser";
     Layout = "AdminLayout";
 }
-
-
+@model ParcelManagementSystemMVC.Models.Users
 
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -12,15 +11,15 @@
         <li class="breadcrumb-item active" aria-current="page">Add New</li>
     </ol>
 </nav>
-
-<div class="row">
+<form method="post" asp-controller="AdminUser" asp-action="AddUser"> 
+  <div class="row">
     <div class="col-5">
         <div class="row mb-2">
             <div class="col-4">
                 <label for="firstname" class="form-label">First Name</label>
             </div>
             <div class="col-6">
-                <input type="text" class="form-control" id="firstname" />
+                <input type="text" asp-for="FirstName"  class="form-control" id="firstname" />
             </div>
         </div>
         <div class="row mb-2">
@@ -28,7 +27,7 @@
                 <label for="lastname" class="form-label">Last Name</label>
             </div>
             <div class="col-6">
-                <input type="text" class="form-control" id="lastname" />
+                <input type="text" asp-for="LastName" class="form-control" id="lastname" />
             </div>
         </div>
         <div class="row mb-2">
@@ -36,7 +35,7 @@
                 <label for="street" class="form-label">Street</label>
             </div>
             <div class="col-6">
-                <input type="text" class="form-control" id="street" />
+                <input type="text"   class="form-control" id="street" />
             </div>
         </div>
         <div class="row mb-2">
@@ -52,15 +51,27 @@
                 <label for="state" class="form-label">State</label>
             </div>
             <div class="col-6">
-                <input class="form-control" id="state" />
+                    <select class="form-select" id="accessrole">
+                        <option selected disabled>ComboBox</option>
+                        <option>Read</option>
+                        <option>Write</option>
+                    </select>
+
             </div>
         </div>
         <div class="row mb-2">
             <div class="col-4">
-                <label for="country" class="form-label">Country</label>
+                <label for="country"  class="form-label">Country</label>
             </div>
             <div class="col-6">
-                <input class="form-control" id="country" />
+                    <select class="form-select" id="accessrole">
+                        <option selected disabled>ComboBox</option>
+                        <option>Nepal</option>
+                        <option>India</option>
+                        <option>Pakistan</option>
+                        <option>Bhutan</option>
+                        <option>Bhangladesh</option>
+                    </select>
             </div>
         </div>
     </div>
@@ -70,7 +81,14 @@
                 <label for="branch" class="form-label">Branch</label>
             </div>
             <div class="col-6">
-                <input class="form-control" id="branch" />
+                    <select class="form-select" id="accessrole">
+                        <option selected disabled>ComboBox</option>
+                        <option>Nepal</option>
+                        <option>India</option>
+                        <option>Pakistan</option>
+                        <option>Bhutan</option>
+                        <option>Bhangladesh</option>
+                    </select>
             </div>
         </div>
         <div class="row mb-2">
@@ -78,7 +96,7 @@
                 <label for="phoneNumber" class="form-label">PhoneNumber</label>
             </div>
             <div class="col-6">
-                <input type="text" class="form-control" id="phoneNumber" />
+                <input type="text" class="form-control" asp-for="Phone" id="phoneNumber" />
             </div>
         </div>
         <div class="row mb-2">
@@ -86,13 +104,13 @@
                 <label for="email" class="form-label">Email</label>
             </div>
             <div class="col-6">
-                <input type="email" class="form-control" id="email" />
+                <input type="email" asp-for="Email" class="form-control" id="email" />
             </div>
         </div>
         <div class="row mb-2">
             <div class="col-4">
                 <label for="branch" class="form-label">Is External</label>
-            </div>
+            </div> 
             <div class="col-6">
                 <input type="checkbox" class="form-check" id="branch" />
             </div>
@@ -110,7 +128,7 @@
                 <label for="password" class="form-label">Password</label>
             </div>
             <div class="col-6">
-                <input class="form-control" id="password" />
+                <input  asp-for="Password"  class="form-control" id="password" />
             </div>
         </div>
         <div class="row mb-2">
@@ -118,7 +136,7 @@
                 <label for="accessrole" class="form-label">Access Role</label>
             </div>
             <div class="col-6">
-                <select class="form-select" id="accessrole">
+                <select  asp-for="Role" class="form-select" id="accessrole">
                     <option selected disabled>ComboBox</option>
                     <option>Read</option>
                 </select>
@@ -145,7 +163,8 @@
         </script>
 
     </div>
-</div>
+  </div>
+</form>
 <div class="container">
     <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-5">
 
