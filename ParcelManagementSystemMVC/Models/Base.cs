@@ -1,7 +1,10 @@
-﻿namespace ParcelManagementSystemMVC.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ParcelManagementSystemMVC.Models
 {
     public class Base
     {
+        [Key]
         public int id { get; set; }
         public string CreatedBy { get; set; }  
         public DateTime  DateCreated { get; set; }

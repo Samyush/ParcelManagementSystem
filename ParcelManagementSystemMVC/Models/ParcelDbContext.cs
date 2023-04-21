@@ -7,7 +7,7 @@ public class ParcelDbContext : IdentityDbContext
 {
     public ParcelDbContext(DbContextOptions<ParcelDbContext> options) : base(options)
     {
-        Database.EnsureCreated();
+       /* Database.EnsureCreated();*/
     }
 
     public DbSet<Users>Users{ get; set; }

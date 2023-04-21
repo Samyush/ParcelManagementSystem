@@ -1,9 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ParcelManagementSystemMVC.Models;
 
 public class Parcels :Base
 {
+    [Key]
     public int Id { get; set; }
     public string ParcelName { get; set; }
     public string ParcelType { get; set; }

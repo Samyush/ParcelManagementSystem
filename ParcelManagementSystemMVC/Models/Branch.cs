@@ -2,8 +2,9 @@
 
 namespace ParcelManagementSystemMVC.Models
 {
-    public class Branch :Base
+    public class Branch
     {
+        [Key]
         public int id { get; set; }
         [Required(ErrorMessage ="Cann't be null")]
         public string Branch_name { get; set; } 

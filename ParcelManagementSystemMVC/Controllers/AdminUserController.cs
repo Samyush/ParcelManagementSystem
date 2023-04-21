@@ -35,6 +35,7 @@ namespace ParcelManagementSystemMVC.Controllers
             }
             return View();
         }
+        [HttpGet]
         public IActionResult UserList()
         {
             return View();
@@ -89,8 +90,8 @@ namespace ParcelManagementSystemMVC.Controllers
         public IActionResult BranchList()
 
         {
-            var branch = _context.Branchs;
-            return View(branch.ToList());
+            var branch = _context.Branchs.ToList();
+            return View(branch);
         }
         public IActionResult Delete(int id)
 
