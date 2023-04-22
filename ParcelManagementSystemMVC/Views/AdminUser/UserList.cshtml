@@ -99,9 +99,10 @@
                 <td scope="col">@i.AccessRole</td>
                 <td scope="col">
                     <div class="d-grid d-md-flex ">
-                        <button class="btn btn-primary btn-sm">Edit</button>
-                        <button class="btn btn-danger  ms-1 btn-sm">De-activate</button>
-                        <button class="btn btn-success  ms-1 btn-sm">Delete</button>
+                            <a class="btn btn-primary btn-sm" asp-controller="AdminUser" asp-action="EditUser" asp-route-id="@i.Id">Edit</a>
+                            <a class="btn btn-danger  ms-1 btn-sm">De-activate</a>
+                            <a class="btn btn-danger ms-1  btn-sm" asp-controller="AdminUser" asp-action="DeleteUserConfirm" asp-route-id="@i.Id">Delete</a>
+
                     </div>
                 </td>
             </tr>

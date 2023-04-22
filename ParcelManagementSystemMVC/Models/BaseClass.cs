@@ -2,7 +2,7 @@
 {
     public class BaseClass
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string ?CreatedBy { get; set; }
         public DateTime DateCreated { get; set; }
         public string ?UpdatedBy { get; set; }

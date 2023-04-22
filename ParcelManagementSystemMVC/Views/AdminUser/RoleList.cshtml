@@ -5,7 +5,7 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a asp-controller="Parcel" asp-action="Dashboard">Home</a></li>
-        <li class="breadcrumb-item">Parcel</a></li>
+        <li class="breadcrumb-item">Parcel</li>
         <li class="breadcrumb-item active" aria-current="page">ParcelList</li>
     </ol>
 </nav>
@@ -21,22 +21,22 @@
                 </div>
             </div>
         </div>
-       
-       
+
+
         <div class="col-2">
             <div class="row">
                 <label for="Status" class="col-4 col-form-label text-end">Status</label>
-                
-                    <div class="col-4">
-                        <select class="form-select mb-3">
 
-                             <option selected>Active</option>
-                            <option>De-Active</option>
+                <div class="col-4">
+                    <select class="form-select mb-3">
 
-                        </select>
-                    
+                        <option selected>Active</option>
+                        <option>De-Active</option>
+
+                    </select>
+
                 </div>
-                
+
             </div>
         </div>
         <div class="col-4">
@@ -50,9 +50,9 @@
         <thead>
             <tr>
                 <th scope="col">Role Name</th>
-                
+
                 <th scope="col">Status</th>
-            
+
                 <th scope="col">Actions</th>
             </tr>
         </thead>
@@ -61,7 +61,7 @@
                 <td scope="col">Role Name</td>
 
                 <td scope="col">Status</td>
-              
+
                 <td scope="col">
                     <div class="d-grid gap-2 d-md-flex">
                         <button class="btn btn-primary btn-sm">Update</button>

@@ -25,6 +25,10 @@ namespace ParcelManagementSystemMVC.Controllers
 
             if (users != null)
             {
+                users.DateCreated=DateTime.Now.ToLocalTime();
+                users.IsActive=true;
+                users.IsDeleted = false;
+                users.CreatedBy = "Default";
                 _context.Users.Add(users);
                 _context.SaveChanges();
                 return RedirectToAction("UserList");
@@ -40,6 +44,72 @@ namespace ParcelManagementSystemMVC.Controllers
             return View(users.ToList());
         }
 
+        public IActionResult EditUser(int? Id)
+        {
+            var user = _context.Users.Find(Id);
+            if (Id == null || _context.Users == null)
+            {
+                return NotFound();
+            }
+            
+            return View(user);
+        }
+        [HttpPost]
+        public IActionResult EditUser(Users user,int? Id)
+        {
+
+            if (user.Id != Id)
+            {
+                return NotFound();
+            }
+
+            Users olduser = _context.Users.Find(Id);
+            Users updateuser = new Users();
+            updateuser = user;
+            updateuser.UserName = olduser.UserName;
+            updateuser.UserPassword = olduser.UserPassword;
+            updateuser.DateCreated = olduser.DateCreated;
+            updateuser.IsDeleted = olduser.IsDeleted;
+            updateuser.IsActive = olduser.IsActive;
+            updateuser.CreatedBy = olduser.CreatedBy;
+
+            updateuser.DateUpdated = DateTime.Now;
+            updateuser.UpdatedBy = "Updatedusers";
+            _context.Users.Remove(olduser);
+            _context.Users.Update(updateuser);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(UserList));
+
+
+        }
+        
+        public IActionResult DeleteUser(int? Id)
+        {
+            var user = _context.Users.Find(Id);
+            if (Id == null || _context.Users == null)
+            {
+                return NotFound();
+            }
+
+            return View(user);
+        }
+        
+        public IActionResult DeleteUserConfirm(int? Id)
+        {
+            if (Id == null || _context.Users == null)
+            {
+                return NotFound();
+            }
+            var user = _context.Users.Find(Id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            _context.Users.Remove(user);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(UserList));
+        }
+        
         public IActionResult AccessAdmin()
         {
             return View();
@@ -80,4 +150,3 @@ namespace ParcelManagementSystemMVC.Controllers
         }
     }
 }
-
