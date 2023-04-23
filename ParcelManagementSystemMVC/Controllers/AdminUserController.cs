@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ParcelManagementSystemMVC.Models;
-using System.Reflection.Metadata.Ecma335;
 
 namespace ParcelManagementSystemMVC.Controllers
 {
@@ -19,8 +18,8 @@ namespace ParcelManagementSystemMVC.Controllers
         }
         [HttpGet]
         public IActionResult AddUser()
-        { 
-            return View(); 
+        {
+            return View();
 
         }
         [HttpPost]
@@ -62,78 +61,125 @@ namespace ParcelManagementSystemMVC.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddBranch(Branch branch)
+        public async Task<IActionResult> AddBranch([Bind("id, Branch_name, Branch_code, State, Street,City,Zip_code")] Branch branch)
         {
             if (ModelState.IsValid)
             {
-                var brn = new Branch()
-                {
-                    Branch_name = branch.Branch_name,
-                    Branch_code = branch.Branch_code,
-                    State = branch.State,
-                    Street = branch.Street,
-                    City = branch.City,
-                    Zip_code = branch.Zip_code,
-                };
-                _context.Branchs.Add(brn);
+              _context.Add(branch);
                 TempData["error"] = "Record Save";
                 _context.SaveChanges();
                 return RedirectToAction("BranchList");
-            }
+                 }
             else
             {
                 TempData["error"] = "Empty Field";
-                return View( branch);
+                return View(branch);
             }
 
         }
+        [HttpGet]
         public IActionResult BranchList()
 
         {
             var branch = _context.Branchs.ToList();
             return View(branch);
         }
-        public IActionResult Delete(int id)
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null || _context.Branchs == null)
+            {
+                return NotFound();
+            }
+            var branch = await _context.Branchs.FirstOrDefaultAsync(m => m.id == id);
+            if (branch == null)
+            {
+                return NotFound();
+            }
+            return View("Delete");
+        }
+        [HttpPost ,ActionName("Delete")]
+        public async Task<IActionResult> DeleteFirmed(int id)
 
         {
-            var brn =_context.Branchs.SingleOrDefault(e=> e.id == id);  
-            _context.Branchs.Remove(brn);
-            _context.SaveChanges();
+            if(_context.Branchs == null)
+            {
+                return Problem("their was a problem");
+            }
+            var brn =  await _context.Branchs.FindAsync(id);
+            if(brn !=null)
+            {
+                _context.Branchs.Remove(brn);
+            }
+            
+           await _context.SaveChangesAsync();
             TempData["error"] = "Record Deleted";
-            return RedirectToAction("BranchList");
+            return RedirectToAction(nameof(BranchList));
         }
         [HttpGet]
-        public IActionResult Edit (int id)
+        public async Task<IActionResult> Details(int? id)
         {
-            var brn =_context.Branchs.SingleOrDefault(e=> e.id== id);
-            var result = new Branch()
+            if(id==null || _context.Branchs == null)
+            { return NotFound();
+            }
+            var branch = await _context.Branchs.FirstOrDefaultAsync(m=>m.id  == id);    
+            if (branch == null)
             {
-                Branch_name = brn.Branch_name,
-                Branch_code = brn.Branch_code,
-                State = brn.State,
-                Street = brn.Street,
-                City = brn.City,
-                Zip_code = brn.Zip_code,
-            };
-            return View(result);
+                return NotFound();
+            }
+            
+            return View(branch);
+        }
+        [HttpGet]
+        public async Task<IActionResult> Edit (int? id)
+        {
+            if(id == null || _context.Branchs == null)
+            {
+                return NotFound();
+            }
+            var branch = await _context.Branchs.FindAsync(id);
+            if(branch == null)
+            {
+                return NotFound();
+            }
+            return View(branch);
+            
         }
         [HttpPost]
-        public IActionResult Edit(Branch branch)
+        public  async Task<IActionResult> Edit(int id, [Bind("id, Branch_name, Branch_code, State, Street, City, Zip_code")] Branch branch)
         {
-            var brn = new Branch()
+            if (id != branch.id)
             {
-                id= branch.id,
-                Branch_name = branch.Branch_name,
-                Branch_code = branch.Branch_code,
-                State = branch.State,
-                Street = branch.Street,
-                City = branch.City,
-                Zip_code = branch.Zip_code,
-            };
-            _context.Branchs.Update(brn);
-            _context.SaveChanges();
-            TempData["error"] = "Record Updated";
-            return RedirectToAction("BranchList");
+                return NotFound();
+            }
+            if(ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(branch);
+                    await _context.SaveChangesAsync();
+                    TempData["error"] = "Record Updated";
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!branchExits(branch.id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+
+                }
+                return RedirectToAction(nameof(BranchList));
+            }
+            return View(branch);
+        }
+        private bool branchExits(int id)
+        {
+            return (_context.Branchs?.Any(e=> e.id == id)).GetValueOrDefault();
         }
     }
 }

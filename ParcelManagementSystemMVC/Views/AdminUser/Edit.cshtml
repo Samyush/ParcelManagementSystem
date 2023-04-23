@@ -4,6 +4,7 @@
     ViewData["Title"] = "Edit";
     Layout = "AdminLayout";
 }
+
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#"><u>Home</u></a></li>
@@ -11,7 +12,6 @@
         <li class="breadcrumb-item active" aria-current="page">Add New</li>
     </ol>
 </nav>
-
 <form method="post" asp-controller="AdminUser" asp-action="Edit">
     <div class="main">
         <div class="container">
@@ -61,9 +61,9 @@
                     <input type="text" asp-for="Zip_code" class="form-control" />
                 </div>
             </div>
-            <div class="d-grid gap-lg-2 d-md-flex justify-content-md-center p-2 mt-4 ">
-                <button class="btn btn-outline-primary me-md-2" type="submit">Sumbit</button>
-                <button class="btn btn-outline-primary" type="button">Reset</button>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                 <a asp-action="BranchList">Back to List</a>
             </div>
         </div>
     </div>

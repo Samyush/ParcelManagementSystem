@@ -1,9 +1,12 @@
-﻿@{
+﻿
+@model IEnumerable<ParcelManagementSystemMVC.Models.Branch>
+
+@{
     ViewData["Title"] = "BranchList";
     Layout = "AdminLayout";
 }
-@model List<Branch>
-<form>
+
+<form method="post" asp-action="BranchList" asp-controller="AdminUser">
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#"><u>Home</u></a></li>
@@ -18,7 +21,7 @@
                     <label>Branch Code :</label>
                 </div>
                 <div class="col-auto">
-                    <input type="text"  class="form-control">
+                    <input type="search" value="@ViewData["BranchList"]" name="branch" class="form-control">
                 </div>
                 <div class="col-auto">
                     <label>Branch Name :</label>
@@ -33,7 +36,7 @@
                     <input type="text" class="form-control">
                 </div>
                 <div class="col-auto">
-                    <button>Search</button>
+                    <a asp-action="BranchList">Search</a>
                 </div>
                 <div class="excel-btn d-flex justify-content-end col-11">
                     <button id="downloadexcel" class="btn border-0"><i class="fa-solid fa-file-export"></i></button>
@@ -53,11 +56,9 @@
                         </tr>
                     </thead>
                     <tbody>
-
                         @foreach (var i in Model)
-                        {
+                         {
                             <tr>
-                               
                                 <td>@i.Branch_name</td>
                                 <td>@i.Branch_code</td>
                                 <td>@i.City</td>
@@ -66,8 +67,9 @@
                                 <td>55</td>
                                 <td scope="col">
                                     <div class="d-grid d-md-flex ">
-                                        <a class="btn btn-primary btn-sm" asp-controller="AdminUser" asp-action="Edit" asp-route-id="@i.id">Edit</a>
-                                        <a class="btn btn-success  ms-1 btn-sm" asp-controller="AdminUser" asp-action="Delete" asp-route-id="@i.id">Delete</a>
+                                        <a class="btn btn-primary btn-sm" asp-controller="AdminUser" asp-action="Edit" asp-route-id="@i.id">Edit</a> 
+                                        <a class="btn btn-success  ms-1 btn-danger" asp-controller="AdminUser" asp-action="Delete" asp-route-id="@i.id">Delete</a>
+                                        <a class="btn btn-success  ms-1 btn-" asp-controller="AdminUser" asp-action="Details" asp-route-id="@i.id">Details</a>
                                     </div>
                                 </td>
                             </tr>
