@@ -6,7 +6,7 @@
     Layout = "AdminLayout";
 }
 
-<form method="post" asp-action="BranchList" asp-controller="AdminUser">
+<form method="post" asp-action="BranchList" asp-controller="AddBranch">
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#"><u>Home</u></a></li>
@@ -67,9 +67,9 @@
                                 <td>55</td>
                                 <td scope="col">
                                     <div class="d-grid d-md-flex ">
-                                        <a class="btn btn-primary btn-sm" asp-controller="AdminUser" asp-action="Edit" asp-route-id="@i.id">Edit</a> 
-                                        <a class="btn btn-success  ms-1 btn-danger" asp-controller="AdminUser" asp-action="Delete" asp-route-id="@i.id">Delete</a>
-                                        <a class="btn btn-success  ms-1 btn-" asp-controller="AdminUser" asp-action="Details" asp-route-id="@i.id">Details</a>
+                                        <a class="btn btn-primary btn-sm" asp-controller="AddBranch" asp-action="Edit" asp-route-id="@i.id">Edit</a> 
+                                        <a class="btn btn-success  ms-1 btn-danger" asp-controller="AddBranch" asp-action="Delete" asp-route-id="@i.id">Delete</a>
+                                        <a class="btn btn-success  ms-1 btn-" asp-controller="AddBranch" asp-action="Details" asp-route-id="@i.id">Details</a>
                                     </div>
                                 </td>
                             </tr>

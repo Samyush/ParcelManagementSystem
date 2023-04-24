@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ParcelManagementSystemMVC.Models;
 
-public class Parcels :Base
+public class Parcels 
 {
     [Key]
     public int Id { get; set; }
