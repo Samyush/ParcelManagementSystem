@@ -3,7 +3,8 @@
     Layout = "AdminLayout";
 }
 
-@model Users
+@model ModelList
+
 
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -20,7 +21,7 @@
                 <label for="firstname" class="form-label">First Name</label>
             </div>
             <div class="col-6">
-                <input type="text" asp-for="FirstName" class="form-control" id="firstname" />
+                <input type="text" asp-for="UserModel.FirstName" class="form-control" id="firstname" />
             </div>
         </div>
         <div class="row mb-2">
@@ -28,7 +29,7 @@
                 <label for="lastname" class="form-label">Last Name</label>
             </div>
             <div class="col-6">
-                <input type="text"  asp-for="LastName" class="form-control" id="lastname" />
+                    <input type="text" asp-for="UserModel.LastName" class="form-control" id="lastname" />
             </div>
         </div>
         <div class="row mb-2">
@@ -36,7 +37,7 @@
                 <label for="street" class="form-label">Street</label>
             </div>
             <div class="col-6">
-                <input type="text" asp-for="Street" class="form-control" id="street" />
+                    <input type="text" asp-for="UserModel.Street" class="form-control" id="street" />
             </div>
         </div>
         <div class="row mb-2">
@@ -44,7 +45,7 @@
                 <label for="city" class="form-label">City</label>
             </div>
             <div class="col-6">
-                <input type="text" asp-for="City" class="form-control" id="city" />
+                    <input type="text" asp-for="UserModel.City" class="form-control" id="city" />
             </div>
         </div>
         <div class="row mb-2">
@@ -52,7 +53,7 @@
                 <label for="state" class="form-label">State</label>
             </div>
             <div class="col-6">
-                <input asp-for="State" class="form-control" id="state" />
+                    <input asp-for="UserModel.State" class="form-control" id="state" />
             </div>
         </div>
         <div class="row mb-2">
@@ -60,7 +61,7 @@
                 <label for="country" class="form-label">Country</label>
             </div>
             <div class="col-6">
-                <input asp-for="Country" class="form-control" id="country" />
+                    <input asp-for="UserModel.Country" class="form-control" id="country" />
             </div>
         </div>
     </div>
@@ -70,7 +71,16 @@
                 <label for="branch" class="form-label">Branch</label>
             </div>
             <div class="col-6">
-                <input asp-for="Branch" class="form-control" id="branch" />
+                    <select asp-for="UserModel.Branch" class="form-select" id="branch">
+                        <option selected disabled>Select Branch</option>
+                         
+                        @foreach(var i in Model.BranchModel)
+                        {
+ 
+                            <option value="@i.BranchName">@i.BranchName</option>
+                        
+                        }
+                    </select>
             </div>
         </div>
         <div class="row mb-2">
@@ -78,7 +88,7 @@
                 <label for="phoneNumber" class="form-label">PhoneNumber</label>
             </div>
             <div class="col-6">
-                <input type="text" asp-for="PhoneNumber" class="form-control" id="phoneNumber" />
+                    <input type="text" asp-for="UserModel.PhoneNumber" class="form-control" id="phoneNumber" />
             </div>
         </div>
         <div class="row mb-2">
@@ -86,7 +96,7 @@
                 <label for="email" class="form-label">Email</label>
             </div>
             <div class="col-6">
-                <input type="email" asp-for="Email" class="form-control" id="email" />
+                    <input type="email" asp-for="UserModel.Email" class="form-control" id="email" />
             </div>
         </div>
         <div class="row mb-2">
@@ -94,7 +104,7 @@
                 <label for="branch" class="form-label">Is External</label>
             </div>
             <div class="col-6">
-                <input type="checkbox" asp-for="IsExternal" class="form-check" id="isExternal" />
+                <input type="checkbox" asp-for="UserModel.IsExternal" class="form-check" id="isExternal" />
             </div>
         </div>
         <div class="row mb-2">
@@ -102,7 +112,7 @@
                 <label for="username" class="form-label">Username</label>
             </div>
             <div class="col-6">
-                <input type="text" asp-for="UserName" class="form-control" id="username" />
+                    <input type="text" asp-for="UserModel.UserName" class="form-control" id="username" />
             </div>
         </div>
         <div class="row mb-2">
@@ -110,7 +120,7 @@
                 <label for="password" class="form-label">Password</label>
             </div>
             <div class="col-6">
-                <input type="password" asp-for="UserPassword" class="form-control" id="password" />
+                    <input type="password" asp-for="UserModel.UserPassword" class="form-control" id="password" />
             </div>
         </div>
         <div class="row mb-2">
@@ -118,7 +128,7 @@
                 <label for="accessrole" class="form-label">Access Role</label>
             </div>
             <div class="col-6">
-                <select asp-for="AccessRole" class="form-select" id="accessrole">
+                    <select asp-for="UserModel.AccessRole" class="form-select" id="accessrole">
                     <option selected disabled>ComboBox</option>
                     <option>Read</option>
                 </select>

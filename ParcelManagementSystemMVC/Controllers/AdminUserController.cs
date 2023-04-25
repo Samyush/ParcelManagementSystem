@@ -17,16 +17,20 @@ namespace ParcelManagementSystemMVC.Controllers
         }
         public IActionResult AddUser()
         {
-            return View();
+            var branch = _context.Branch.ToList();
+            ModelList modelList = new();
+            modelList.BranchModel = branch;
+            
+            return View(modelList);
         }
         [HttpPost]
-        public IActionResult AddUser(Users users)
+        public IActionResult AddUser(ModelList modellist)
         {
-
+            Users users = modellist.UserModel;
             if (users != null)
             {
-                users.DateCreated=DateTime.Now.ToLocalTime();
-                users.IsActive=true;
+                users.DateCreated = DateTime.Now.ToLocalTime();
+                users.IsActive = true;
                 users.IsDeleted = false;
                 users.CreatedBy = "Default";
                 _context.Users.Add(users);
@@ -51,11 +55,11 @@ namespace ParcelManagementSystemMVC.Controllers
             {
                 return NotFound();
             }
-            
+
             return View(user);
         }
         [HttpPost]
-        public IActionResult EditUser(Users user,int? Id)
+        public IActionResult EditUser(Users user, int? Id)
         {
 
             if (user.Id != Id)
@@ -64,7 +68,7 @@ namespace ParcelManagementSystemMVC.Controllers
             }
 
             Users olduser = _context.Users.Find(Id);
-            Users updateuser = new Users();
+            Users updateuser = new();
             updateuser = user;
             updateuser.UserName = olduser.UserName;
             updateuser.UserPassword = olduser.UserPassword;
@@ -82,7 +86,7 @@ namespace ParcelManagementSystemMVC.Controllers
 
 
         }
-        
+
         public IActionResult DeleteUser(int? Id)
         {
             var user = _context.Users.Find(Id);
@@ -93,7 +97,7 @@ namespace ParcelManagementSystemMVC.Controllers
 
             return View(user);
         }
-        
+
         public IActionResult DeleteUserConfirm(int? Id)
         {
             if (Id == null || _context.Users == null)
@@ -109,7 +113,7 @@ namespace ParcelManagementSystemMVC.Controllers
             _context.SaveChanges();
             return RedirectToAction(nameof(UserList));
         }
-        
+
         public IActionResult AccessAdmin()
         {
             return View();
@@ -134,6 +138,7 @@ namespace ParcelManagementSystemMVC.Controllers
         {
             if (branch != null)
             {
+                branch.TotalStaff = _context.Users.Count();
                 _context.Branch.Add(branch);
                 _context.SaveChanges();
                 return RedirectToAction("BranchList");
@@ -147,6 +152,40 @@ namespace ParcelManagementSystemMVC.Controllers
             var branch = _context.Branch;
             return View(branch.ToList());
 
+        }
+        public IActionResult EditBranch(int id) { 
+           var branch = _context.Branch.Find(id);
+
+            if (branch == null) {
+                return NotFound();
+            }
+
+            return View(branch);
+            
+            
+        }
+        [HttpPost]
+        public IActionResult EditBranch(Branch branch, int? Id)
+        {
+            if (branch.Id != Id){
+                return NotFound();
+            }
+            Branch branchupdate = branch;
+            branchupdate.TotalStaff = _context.Users.Count();
+            _context.Branch.Update(branchupdate);
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(BranchList));
+        }
+
+        public IActionResult DeleteBranch(int id) {
+            var branch = _context.Branch.Find(id);
+            if (branch ==null) {
+                return NotFound();
+            }
+            _context.Branch.Remove(branch);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(RoleList));
         }
     }
 }

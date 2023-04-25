@@ -60,11 +60,11 @@
                                 <td>@i.City</td>
                                 <td>@i.State</td>
                                 <td>@i.ZipCode</td>
-                                <td>55</td>
+                                <td>@i.TotalStaff</td>
                                 <td scope="col">
                                     <div class="d-grid d-md-flex ">
-                                        <button class="btn btn-primary btn-sm">Edit</button>
-                                        <button class="btn btn-success  ms-1 btn-sm">Delete</button>
+                                        <a class="btn btn-primary btn-sm" asp-controller="AdminUser" asp-action="EditBranch" asp-route-id="@i.Id">Edit</a>
+                                        <a class="btn btn-success  ms-1 btn-sm" asp-controller="AdminUser" asp-action="DeleteBranch" asp-route-id="@i.Id">Delete</a>
                                     </div>
                                 </td>
                             </tr>

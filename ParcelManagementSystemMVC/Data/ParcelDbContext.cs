@@ -10,10 +10,7 @@ public class ParcelDbContext : IdentityDbContext
     {
         
     }
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.EnableSensitiveDataLogging();
-    }
+  
     public DbSet<Users> Users { get; set; }
     public DbSet<Branch> Branch { get; set; }
 
