@@ -1,4 +1,4 @@
-﻿@{
+﻿@{ 
     ViewData["Title"] = "AddUser";
     Layout = "AdminLayout";
 }
@@ -11,7 +11,7 @@
         <li class="breadcrumb-item active" aria-current="page">Add New</li>
     </ol>
 </nav>
-<form method="post" asp-controller="AdminUser" asp-action="AddUser"> 
+<form method="post" asp-controller="AdminUser" asp-action="UserList"> 
   <div class="row">
     <div class="col-5">
         <div class="row mb-2">
@@ -35,7 +35,7 @@
                 <label for="street" class="form-label">Street</label>
             </div>
             <div class="col-6">
-                <input type="text"   class="form-control" id="street" />
+                <input type="text" asp-for ="Street"  class="form-control" id="street" />
             </div>
         </div>
         <div class="row mb-2">
@@ -43,7 +43,7 @@
                 <label for="city" class="form-label">City</label>
             </div>
             <div class="col-6">
-                <input type="text" class="form-control" id="city" />
+                <input type="text" asp-for="City" class="form-control" id="city" />
             </div>
         </div>
         <div class="row mb-2">
@@ -51,12 +51,7 @@
                 <label for="state" class="form-label">State</label>
             </div>
             <div class="col-6">
-                    <select class="form-select" id="accessrole">
-                        <option selected disabled>ComboBox</option>
-                        <option>Read</option>
-                        <option>Write</option>
-                    </select>
-
+                    <input type="text" class="form-control" asp-for="State"/>
             </div>
         </div>
         <div class="row mb-2">
@@ -64,14 +59,7 @@
                 <label for="country"  class="form-label">Country</label>
             </div>
             <div class="col-6">
-                    <select class="form-select" id="accessrole">
-                        <option selected disabled>ComboBox</option>
-                        <option>Nepal</option>
-                        <option>India</option>
-                        <option>Pakistan</option>
-                        <option>Bhutan</option>
-                        <option>Bhangladesh</option>
-                    </select>
+                  <input type="text" class="form-control" asp-for="Country"/>
             </div>
         </div>
     </div>
@@ -81,13 +69,12 @@
                 <label for="branch" class="form-label">Branch</label>
             </div>
             <div class="col-6">
-                    <select class="form-select" id="accessrole">
-                        <option selected disabled>ComboBox</option>
-                        <option>Nepal</option>
-                        <option>India</option>
-                        <option>Pakistan</option>
-                        <option>Bhutan</option>
-                        <option>Bhangladesh</option>
+                    <select class="form-select" asp-for="Branch" id="branch">
+                        <option selected disabled>Select Branch</option>
+                      @* @foreach(var i in Model.BranchModel)
+                        {
+                            <option value="@i.Branch_name">@i.Branch_name</option>
+                        }*@
                     </select>
             </div>
         </div>
@@ -96,7 +83,7 @@
                 <label for="phoneNumber" class="form-label">PhoneNumber</label>
             </div>
             <div class="col-6">
-                <input type="text" class="form-control" asp-for="Phone" id="phoneNumber" />
+                <input type="text" class="form-control" asp-for="PhoneNumber" id="phoneNumber" />
             </div>
         </div>
         <div class="row mb-2">
@@ -104,15 +91,16 @@
                 <label for="email" class="form-label">Email</label>
             </div>
             <div class="col-6">
-                <input type="email" asp-for="Email" class="form-control" id="email" />
+                <input type="email" asp-for="Email" class="form-control" id="email"/>
             </div>
         </div>
         <div class="row mb-2">
             <div class="col-4">
-                <label for="branch" class="form-label">Is External</label>
+                <label for="branch" asp-for="IsExternal" class="form-label">Is External</label>
             </div> 
             <div class="col-6">
-                <input type="checkbox" class="form-check" id="branch" />
+                <input type="checkbox"  class="form-check" id="branch" />
+
             </div>
         </div>
         <div class="row mb-2">
@@ -128,7 +116,7 @@
                 <label for="password" class="form-label">Password</label>
             </div>
             <div class="col-6">
-                <input  asp-for="Password"  class="form-control" id="password" />
+                <input  asp-for="UserPassword"  class="form-control" id="password" />
             </div>
         </div>
         <div class="row mb-2">
@@ -136,31 +124,28 @@
                 <label for="accessrole" class="form-label">Access Role</label>
             </div>
             <div class="col-6">
-                <select  asp-for="Role" class="form-select" id="accessrole">
-                    <option selected disabled>ComboBox</option>
-                    <option>Read</option>
+                <select  asp-for="AccessRole" class="form-select" id="accessrole">
+                    <option selected disabled>Roles</option>
+                      @*  @foreach (var i in Mod)
+                        {
+                           <option value="@i.name">@i.name</option>
+                        }
+                        *@
                 </select>
             </div>
         </div>
     </div>
 
 
-    <div class="col-2 justify-content-center">
+    <div class="col-2 justify-content-center mt-5">
 
-        <div class="h-75">
-            <p><img id="output" height="250" width="150" /></p>
-        </div>
-
-
-        <p><label for="userimage" style="cursor: pointer;">Upload Image</label></p>
-
-        <p><input type="file" accept="image/*" name="userimage" id="userimage" onchange="loadFile(event)" style="display: none;"></p>
-        <script>
-            var loadFile = function (event) {
-                var image = document.getElementById('output');
-                image.src = URL.createObjectURL(event.target.files[0]);
-            };
-        </script>
+            <div class="form-group">
+                <label asp-for="Imagefile"></label>
+                <input asp-for="Imagefile" type="file" class="form-control" />
+                <span asp-validation-for="Imagefile" class="text-danger"></span>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
 
     </div>
   </div>

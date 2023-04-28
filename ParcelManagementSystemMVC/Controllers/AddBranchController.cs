@@ -19,6 +19,7 @@ namespace ParcelManagementSystemMVC.Controllers
         [HttpGet]
         public IActionResult AddBranch()
         {
+
             return View();
         }
 

@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ParcelManagementSystemMVC.Models
 {
-    public class Branch
+    public class Branch 
     {
         [Key]
         public int id { get; set; }
@@ -13,6 +14,7 @@ namespace ParcelManagementSystemMVC.Models
         public string State { get; set; }  
         public string Zip_code { get; set; }    
         public string Branch_code { get; set; }
-
+       
+       
     }
 }

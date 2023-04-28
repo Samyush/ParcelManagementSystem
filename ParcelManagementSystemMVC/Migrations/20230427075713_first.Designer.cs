@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ParcelManagementSystemMVC.Models;
 
@@ -11,9 +12,10 @@ using ParcelManagementSystemMVC.Models;
 namespace ParcelManagementSystemMVC.Migrations
 {
     [DbContext(typeof(ParcelDbContext))]
-    partial class ParcelDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230427075713_first")]
+    partial class first
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
